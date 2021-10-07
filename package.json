@@ -19,8 +19,6 @@
     "sass": "^1.42.1"
   },
   "dependencies": {
-    "autoprefixer": "^10.3.7",
-    "bootstrap": "^5.1.2",
-    "postcss-cli": "^9.0.1"
+    "bootstrap": "^5.1.2"
   }
 }
