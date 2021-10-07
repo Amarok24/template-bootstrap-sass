@@ -7,7 +7,10 @@ Be sure you have git and NodeJs installed. Then run:
 ```sh
 git clone https://github.com/Amarok24/template-bootstrap-sass.git
 ```
-Then enter the created directory and install all dependencies with:
+
+(An alternative way without using git is to download this repository as a ZIP file.)
+
+Then enter the created directory and install all dependencies (Bootstrap...) with:
 ```sh
 npm install
 ```
