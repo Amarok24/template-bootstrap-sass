@@ -1,0 +1,26 @@
+{
+  "name": "template-bootstrap-sass",
+  "version": "1.0.0",
+  "description": "A clean starter template for Bootstrap and Sass.",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass scss:assets/css",
+    "watch:sass": "sass --watch scss:assets/css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bootstrap5",
+    "sass",
+    "scss"
+  ],
+  "author": "Jan Prazak",
+  "license": "The Unlicense",
+  "devDependencies": {
+    "sass": "^1.42.1"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.3.7",
+    "bootstrap": "^5.1.2",
+    "postcss-cli": "^9.0.1"
+  }
+}
