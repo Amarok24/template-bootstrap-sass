@@ -1,0 +1,7 @@
+@use 'custom';
+
+$testcolor: #daba09;
+
+.test-1 {
+  color: $testcolor;
+}
