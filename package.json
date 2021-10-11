@@ -19,6 +19,7 @@
     "sass": "^1.42.1"
   },
   "dependencies": {
-    "bootstrap": "^5.1.2"
+    "bootstrap": "^5.1.2",
+    "terser": "^5.9.0"
   }
 }
