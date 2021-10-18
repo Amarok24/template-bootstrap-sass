@@ -2,13 +2,8 @@
 
 //@use 'family';
 
-// Custom Bootstrap + components
+// Custom Bootstrap
 @use 'custom';
 
-// Components
-@use 'components/buttons';
-
-// Sections
-@use 'sections/navbar';
-@use 'sections/header';
-@use 'sections/content';
+@use 'components';
+@use 'sections';
