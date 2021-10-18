@@ -1,6 +1,8 @@
 # template-bootstrap-sass
 A clean starter template for Bootstrap and Sass.
 
+Demo: https://amarok24.github.io/template-bootstrap-sass/
+
 ## How to set up locally
 Be sure you have git and NodeJs installed. Then run:
 
