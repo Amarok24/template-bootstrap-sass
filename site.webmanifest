@@ -1,0 +1,33 @@
+{
+  "name": "Bootstrap + Sass project template",
+  "short_name": "template-bootstrap-sass",
+  "description": "A starter template for Bootstrap and Sass.",
+  "author": "Jan Prazak",
+  "lang": "en-GB",
+  "related_applications": [
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/Amarok24/template-bootstrap-sass"
+    }
+  ],
+  "icons": [
+    {
+      "src": "./assets/icons/favicon.ico",
+      "type": "image/x-icon",
+      "sizes": "48x48"
+    },
+    {
+      "src": "./assets/icons/favicon.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "./assets/icons/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "150x150"
+    }
+  ],
+  "background_color": "silver",
+  "display": "standalone",
+  "start_url": "./index.html"
+}

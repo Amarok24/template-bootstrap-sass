@@ -1,0 +1,56 @@
+@use "../palette" as *;
+@use "../media";
+
+$tabledata-padding: 1.5em 1.5em;
+
+html {
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  text-size-adjust: none;
+  /* size adjustments OFF on small devices */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif; // 400, 700
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  position: relative; // Needed for Bootstrap's ScrollSpy.
+}
+
+.skip-link {
+  // Accessibility feature.
+  left: -999px;
+  position: fixed;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  padding: 15px;
+  font-size: 1.2em;
+  overflow: hidden;
+  text-align: center;
+  z-index: -999;
+  &:focus,
+  &:active {
+    z-index: 9999;
+    top: auto;
+    left: auto;
+    width: auto;
+    height: auto;
+    overflow: auto;
+    color: white;
+    background-color: black;
+  }
+}
+
+.content--1 {
+  color: $cTextLight;
+  background-color: $cBackground1;
+}
+
+.content--2 {
+  color: $cTextLight;
+  background-color: $cBackground2;
+}

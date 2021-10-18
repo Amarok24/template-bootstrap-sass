@@ -1,0 +1,17 @@
+// open-sans-regular - latin-ext_latin
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/open-sans-v18-latin-ext_latin-regular.woff2") format("woff2"),
+    url("../fonts/open-sans-v18-latin-ext_latin-regular.woff") format("woff");
+}
+
+// open-sans-700 - latin-ext_latin
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/open-sans-v18-latin-ext_latin-700.woff2") format("woff2"),
+    url("../fonts/open-sans-v18-latin-ext_latin-700.woff") format("woff");
+}

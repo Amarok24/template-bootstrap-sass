@@ -1,81 +1,80 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="author" content="Jan Prazak @ Monster" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-  <link rel="stylesheet" href="assets/css/style.css" />
 
   <title>Bootstrap + Sass project template</title>
 
+  <link rel="icon" href="assets/icons/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="assets/icons/favicon-apple-touch.png" />
+
+  <link rel="manifest" href="./site.webmanifest" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <script src="assets/scripts/bootstrap.bundle.min.js" defer="defer"></script>
+  <script src="assets/scripts/appendix.js" defer="defer"></script>
 </head>
 
-<body>
+<body id="home" data-bs-spy="scroll" data-bs-target="#pageNav" data-bs-offset="150"
+  tabindex="0">
 
-  <!-- Source of body: https://github.com/MuriungiPatrick/Bootstrap-5-Theming-Kit -->
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
+  <nav id="pageNav" class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+    <div class="container-sm">
+      <a class="navbar-brand" href="#">
+        <img src="assets/img/dummy_logo.svg" alt="Company" width="227" height="49" />
+      </a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        data-bs-target="#navbarControlled" aria-controls="navbarControlled"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+      <div class="collapse navbar-collapse " id="navbarControlled">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" aria-current="page" href="#home">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Another
-              Link</a>
           </li>
           <li class="nav-item">
             <a class="nav-link disabled" href="#" tabindex="-1"
               aria-disabled="true">Disabled</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#anchorContent1">Content--1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#anchorContent2">Content--2</a>
+          </li>
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search"
-            aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+
       </div>
     </div>
   </nav>
 
 
-  <div class="container-xxl">
-    <div class="row mt-3">
-      <div class="col-lg-4 col-md-6">
-        <div class="mt-3 mb-3">
-          <p>Hello this is body text, Documentation and examples for common text utilities
-            to control
-            alignment, wrapping, weight, and more.</p>
+  <header class="header-image">
+    &#160;
+  </header>
+
+  <section class="container">
+
+    <div class="row">
+      <div class="col-md-6 col-lg-4">
+
+        <div class="my-3">
+          <p>Hello this is body text, Documentation and examples for common text
+            utilities to control alignment, wrapping, weight, and more.</p>
         </div>
 
-        <div class="mt-5 mb-5">
+        <div class="my-5">
           <button type="button" class="btn btn-primary">Primary</button>
           <button type="button" class="btn btn-secondary">Secondary</button>
           <button type="button" class="btn btn-success">Success</button>
@@ -86,7 +85,8 @@
           <button type="button" class="btn btn-dark">Dark</button>
           <button type="button" class="btn btn-link">Link</button>
         </div>
-        <div class="mt-5 mb-5">
+
+        <div class="my-5">
           <button type="button" class="btn btn-outline-primary">Primary</button>
           <button type="button" class="btn btn-outline-secondary">Secondary</button>
           <button type="button" class="btn btn-outline-success">Success</button>
@@ -96,7 +96,8 @@
           <button type="button" class="btn btn-outline-light">Light</button>
           <button type="button" class="btn btn-outline-dark">Dark</button>
         </div>
-        <div class="mt-3 mb-3">
+
+        <div class="my-3">
           <p class="fs-1">.fs-1 text</p>
           <p class="fs-2">.fs-2 text</p>
           <p class="fs-3">.fs-3 text</p>
@@ -104,6 +105,16 @@
           <p class="fs-5">.fs-5 text</p>
           <p class="fs-6">.fs-6 text</p>
         </div>
+
+        <div class="my-3">
+          <h1 class="display-1">Display 1</h1>
+          <h1 class="display-2">Display 2</h1>
+          <h1 class="display-3">Display 3</h1>
+          <h1 class="display-4">Display 4</h1>
+          <h1 class="display-5">Display 5</h1>
+          <h1 class="display-6">Display 6</h1>
+        </div>
+
         <div class="mt-5 mb-3">
           <div class="btn-group" role="group" aria-label="Basic example">
             <button type="button" class="btn btn-primary">Left</button>
@@ -111,14 +122,16 @@
             <button type="button" class="btn btn-primary">Right</button>
           </div>
         </div>
-        <div class="mt-3 mb-3">
+
+        <div class="my-3">
           <div class="btn-group" role="group" aria-label="Basic mixed styles example">
             <button type="button" class="btn btn-danger">Left</button>
             <button type="button" class="btn btn-warning">Middle</button>
             <button type="button" class="btn btn-success">Right</button>
           </div>
         </div>
-        <div class="mt-3 mb-3">
+
+        <div class="my-3">
           <div class="btn-group" role="group"
             aria-label="Button group with nested dropdown">
             <button type="button" class="btn btn-primary">1</button>
@@ -147,7 +160,8 @@
             <div class="col-3 p-4 border border-dark me-2 my-2"></div>
             <div class="col-3 p-4 border border-white me-2 my-2"></div>
           </div>
-          <div class="row mt-3 mb-3 d-flex d-block">
+
+          <div class="row my-3 d-flex d-block">
             <div class="col-3 p-4 border border-1 me-2 my-2"></div>
             <div class="col-3 p-4 border border-2 me-2 my-2"></div>
             <div class="col-3 p-4 border border-3 me-2 my-2"></div>
@@ -155,7 +169,7 @@
             <div class="col-3 p-4 border border-5 me-2 my-2"></div>
           </div>
 
-          <div class="mt-3 mb-3">
+          <div class="my-3">
             <table class="table table-bordered border-primary">
               <thead>
                 <tr>
@@ -189,8 +203,8 @@
         </div>
       </div>
 
-      <div class="col-lg-4 col-md-6">
-        <div class="mt-3 mb-3">
+      <div class="col-md-6 col-lg-4">
+        <div class="my-3">
           <div class="alert alert-primary" role="alert">
             A simple primary alert—check it out!
           </div>
@@ -216,15 +230,8 @@
             A simple dark alert—check it out!
           </div>
         </div>
-        <div class="mt-3 mb-3">
-          <h1 class="display-1">Display 1</h1>
-          <h1 class="display-2">Display 2</h1>
-          <h1 class="display-3">Display 3</h1>
-          <h1 class="display-4">Display 4</h1>
-          <h1 class="display-5">Display 5</h1>
-          <h1 class="display-6">Display 6</h1>
-        </div>
-        <div class="mt-3 mb-3">
+
+        <div class="my-3">
           <div class="accordion" id="accordionPanelsStayOpenExample">
             <div class="accordion-item">
               <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -238,13 +245,17 @@
                 class="accordion-collapse collapse show"
                 aria-labelledby="panelsStayOpen-headingOne">
                 <div class="accordion-body">
-                  <strong>This is the first item's accordion body.</strong> It is shown by
-                  default, until the collapse plugin adds the appropriate classes that we
-                  use to style each element. These classes control the overall appearance,
+                  <strong>This is the first item's accordion body.</strong> It is shown
+                  by
+                  default, until the collapse plugin adds the appropriate classes that
+                  we
+                  use to style each element. These classes control the overall
+                  appearance,
                   as well as the showing and hiding via CSS transitions. You can modify
                   any of this with custom CSS or overriding our default variables. It's
                   also worth noting that just about any HTML can go within the
-                  <code>.accordion-body</code>, though the transition does limit overflow.
+                  <code>.accordion-body</code>, though the transition does limit
+                  overflow.
                 </div>
               </div>
             </div>
@@ -259,12 +270,15 @@
               <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
                 aria-labelledby="panelsStayOpen-headingTwo">
                 <div class="accordion-body">
-                  <strong>This is the second item's accordion body.</strong> It is hidden
-                  by default, until the collapse plugin adds the appropriate classes that
+                  <strong>This is the second item's accordion body.</strong> It is
+                  hidden
+                  by default, until the collapse plugin adds the appropriate classes
+                  that
                   we use to style each element. These classes control the overall
                   appearance, as well as the showing and hiding via CSS transitions. You
                   can modify any of this with custom CSS or overriding our default
-                  variables. It's also worth noting that just about any HTML can go within
+                  variables. It's also worth noting that just about any HTML can go
+                  within
                   the <code>.accordion-body</code>, though the transition does limit
                   overflow.
                 </div>
@@ -282,11 +296,13 @@
                 aria-labelledby="panelsStayOpen-headingThree">
                 <div class="accordion-body">
                   <strong>This is the third item's accordion body.</strong> It is hidden
-                  by default, until the collapse plugin adds the appropriate classes that
+                  by default, until the collapse plugin adds the appropriate classes
+                  that
                   we use to style each element. These classes control the overall
                   appearance, as well as the showing and hiding via CSS transitions. You
                   can modify any of this with custom CSS or overriding our default
-                  variables. It's also worth noting that just about any HTML can go within
+                  variables. It's also worth noting that just about any HTML can go
+                  within
                   the <code>.accordion-body</code>, though the transition does limit
                   overflow.
                 </div>
@@ -294,20 +310,7 @@
             </div>
           </div>
         </div>
-        <div class="mt-3 mb-3">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item active" aria-current="page">Home</li>
-            </ol>
-          </nav>
-
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Library</li>
-            </ol>
-          </nav>
-
+        <div class="my-3">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -318,8 +321,8 @@
         </div>
       </div>
 
-      <div class="col-lg-4 col-md-6">
-        <div class="mt-3 mb-3">
+      <div class="col-md-6 col-lg-4">
+        <div class="my-3">
           <span class="badge bg-primary">Primary</span>
           <span class="badge bg-secondary">Secondary</span>
           <span class="badge bg-success">Success</span>
@@ -329,7 +332,7 @@
           <span class="badge bg-light text-dark">Light</span>
           <span class="badge bg-dark">Dark</span>
         </div>
-        <div class="mt-3 mb-3">
+        <div class="my-3">
           <span class="badge rounded-pill bg-primary">Primary</span>
           <span class="badge rounded-pill bg-secondary">Secondary</span>
           <span class="badge rounded-pill bg-success">Success</span>
@@ -340,12 +343,13 @@
           <span class="badge rounded-pill bg-dark">Dark</span>
         </div>
 
-        <div class="mt-3 mb-3">
+        <div class="my-3">
           <div class="card text-white bg-primary mb-3">
             <div class="card-header">Header</div>
             <div class="card-body">
               <h5 class="card-title">Primary card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and
+              <p class="card-text">Some quick example text to build on the card title
+                and
                 make up the bulk of the card's content.</p>
             </div>
           </div>
@@ -353,7 +357,8 @@
             <div class="card-header">Header</div>
             <div class="card-body">
               <h5 class="card-title">Secondary card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and
+              <p class="card-text">Some quick example text to build on the card title
+                and
                 make up the bulk of the card's content.</p>
             </div>
           </div>
@@ -361,7 +366,8 @@
             <div class="card-header">Header</div>
             <div class="card-body">
               <h5 class="card-title">Success card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and
+              <p class="card-text">Some quick example text to build on the card title
+                and
                 make up the bulk of the card's content.</p>
             </div>
           </div>
@@ -369,7 +375,8 @@
             <div class="card-header">Header</div>
             <div class="card-body">
               <h5 class="card-title">Danger card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and
+              <p class="card-text">Some quick example text to build on the card title
+                and
                 make up the bulk of the card's content.</p>
             </div>
           </div>
@@ -377,7 +384,8 @@
             <div class="card-header">Header</div>
             <div class="card-body">
               <h5 class="card-title">Warning card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and
+              <p class="card-text">Some quick example text to build on the card title
+                and
                 make up the bulk of the card's content.</p>
             </div>
           </div>
@@ -385,7 +393,8 @@
             <div class="card-header">Header</div>
             <div class="card-body">
               <h5 class="card-title">Info card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and
+              <p class="card-text">Some quick example text to build on the card title
+                and
                 make up the bulk of the card's content.</p>
             </div>
           </div>
@@ -393,7 +402,8 @@
             <div class="card-header">Header</div>
             <div class="card-body">
               <h5 class="card-title">Light card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and
+              <p class="card-text">Some quick example text to build on the card title
+                and
                 make up the bulk of the card's content.</p>
             </div>
           </div>
@@ -401,22 +411,115 @@
             <div class="card-header">Header</div>
             <div class="card-body">
               <h5 class="card-title">Dark card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and
+              <p class="card-text">Some quick example text to build on the card title
+                and
                 make up the bulk of the card's content.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
-    integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
-    integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
-    crossorigin="anonymous"></script>
-  <!-- <script src="assets/js/popper.min.js"></script> -->
+  </section>
+
+  <section id="anchorContent1" class="content--1">
+    <article class="container py-6">
+      <h3>Content--1</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam fugiat sint iure,
+        ut enim debitis, nostrum eligendi eius veniam quasi harum quia quas hic aliquam,
+        unde ab. Repellendus fugiat expedita asperiores saepe dolor. Maiores delectus
+        temporibus perspiciatis quos vero animi, error fuga dolores, ipsa nostrum porro
+        iusto molestias sequi eaque nisi quae ullam quis mollitia aliquid! Fugit,
+        similique quia. Optio quod voluptas aspernatur ducimus labore vitae pariatur iste
+        sed repellat harum similique officia, nam qui excepturi explicabo dolore possimus
+        nostrum laudantium corporis rerum, assumenda animi incidunt perspiciatis rem! Quia
+        adipisci laudantium itaque ipsa accusamus laborum ex, magni error, quas voluptas
+        totam, quos nesciunt ullam. Voluptatem, ducimus ex veniam vero assumenda tempora
+        quibusdam iure, culpa fugit possimus, maxime facilis quasi. Fuga exercitationem
+        hic non minus accusamus quas laboriosam ducimus, neque sint eaque officiis nihil
+        dicta excepturi odit veniam ut facilis ullam, obcaecati labore? Est asperiores,
+        labore itaque corporis id inventore explicabo optio quos facere ut maxime in
+        expedita quisquam rerum beatae doloribus mollitia fuga debitis odit! Quis
+        accusamus dicta debitis assumenda minus eius, doloribus, pariatur eos, ab quas
+        quos molestias quaerat quod? Quis quidem, minima ipsam corrupti repellendus hic
+        explicabo a quod, eaque magnam optio itaque incidunt est velit sunt iusto nam,
+        iure commodi suscipit! Quo necessitatibus quod numquam beatae laboriosam pariatur
+        nostrum debitis. Ab quia nostrum, aspernatur quibusdam reprehenderit doloremque
+        tenetur eos facere quasi! Eum beatae excepturi doloremque cum labore iusto modi
+        laudantium rerum aspernatur atque, repellendus suscipit illum quidem voluptatem
+        eaque nostrum delectus maxime facere, id expedita nam quas consectetur asperiores
+        voluptatum. Ipsa, explicabo exercitationem, nostrum aperiam in hic adipisci beatae
+        incidunt ratione autem tempora error optio iste harum totam sunt? Modi, totam
+        corporis consequuntur autem ab repellendus dolor, quisquam odio et sequi
+        veritatis, itaque quibusdam quia veniam? Quo eius, unde quia quidem nulla alias
+        nemo cupiditate vitae quasi.</p>
+    </article>
+  </section>
+
+
+  <section id="anchorContent2" class="content--2">
+    <article class="container-md py-6">
+      <h3>Content--2</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat aspernatur ut
+        ducimus officiis laborum illo velit amet minima expedita beatae quas, dignissimos
+        inventore dolore veritatis adipisci officia molestias autem sint ab error maxime
+        neque, cum et. Iusto beatae ut perferendis dolorem natus, porro minima repellat.
+        Et rerum, labore deleniti quas omnis placeat debitis eligendi obcaecati, minus
+        esse hic corrupti veniam maxime sapiente doloremque tenetur cumque, voluptates
+        consequatur quos. Dolor dicta ut nulla repudiandae dignissimos incidunt ullam
+        alias, velit dolorum unde id sequi necessitatibus odio, eligendi pariatur facere
+        deleniti ratione! Hic est perspiciatis illo exercitationem repellendus soluta
+        praesentium fugit perferendis repudiandae consequuntur dolore sunt aliquam,
+        commodi reprehenderit amet odit, dolorem, tempora deserunt. Consectetur magni ut
+        minus, natus, amet labore sapiente recusandae molestias minima quam repudiandae
+        qui dolorum aperiam odit, repellendus nesciunt dicta iusto. Aliquam, aperiam
+        tenetur neque voluptas nostrum dolorem dolor ducimus quaerat blanditiis
+        repellendus sit qui obcaecati beatae minima odio, quam voluptatibus. Debitis
+        ratione quod maiores voluptatibus veniam libero quidem. Quos, reiciendis quaerat.
+        Iste quas aut harum, quo facilis voluptatibus distinctio tenetur facere fugit
+        vitae illo eaque sed quam exercitationem eum reprehenderit expedita velit pariatur
+        numquam! Odit ullam illum nemo sint voluptate quod ducimus ea non exercitationem
+        saepe expedita aperiam animi dolorem soluta officiis asperiores facilis minima
+        hic, commodi, quo veritatis ipsa porro. Enim ullam, nobis ipsa dolores ut sapiente
+        ratione praesentium cupiditate temporibus quaerat magni ducimus, repellendus,
+        consequuntur fugit facere! Doloremque pariatur tempora natus voluptates ad vero
+        nemo, quidem mollitia culpa cupiditate architecto modi, deleniti rem quis,
+        possimus rerum porro illum. Facilis voluptatibus fuga quibusdam maxime, enim
+        aperiam doloribus nisi natus.</p>
+    </article>
+  </section>
+
+  <footer class="container-md">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto magnam unde
+      ducimus sint iste pariatur expedita eos fugiat consectetur culpa possimus ipsam
+      libero officiis laborum a ab praesentium quibusdam, blanditiis similique! A
+      recusandae blanditiis nostrum debitis perspiciatis expedita explicabo,
+      voluptatibus eveniet sed facere quia laborum excepturi doloremque illo at tempora!
+      Eius voluptas minima inventore, quod qui nihil veritatis rerum recusandae illo
+      maiores doloremque impedit delectus obcaecati tenetur deleniti dolorem error
+      accusamus repudiandae voluptates omnis voluptatem soluta quisquam!</p>
+    <p>Saepe libero, perspiciatis dolorum atque ut culpa vitae tenetur magni soluta
+      animi vero recusandae veniam nesciunt consectetur accusantium similique
+      aspernatur, natus impedit unde cupiditate dignissimos fugiat assumenda a. Harum
+      ipsa dolorem asperiores voluptate eligendi veniam sapiente necessitatibus eveniet
+      quidem, praesentium iusto, esse est. Lorem ipsum, dolor sit amet consectetur
+      adipisicing elit. </p>
+    <p>Minima sequi accusamus voluptas suscipit consequatur itaque eligendi dicta
+      voluptatem tempora numquam, ipsa sed voluptatum sit impedit cum. Omnis libero cum
+      nostrum voluptates mollitia, ex, delectus consectetur esse impedit quod deleniti
+      alias assumenda sit natus accusantium itaque minima? Ea minima ab aut, architecto
+      earum impedit dicta molestias suscipit? Dolorum maiores provident illo laudantium
+      deserunt nihil, suscipit delectus dolore ut voluptate ab nobis natus tempore ea
+      vel beatae cum consectetur ducimus! Cum, nulla a.</p>
+    <p>In porro necessitatibus accusantium libero provident repellat sunt nostrum,
+      consequuntur eligendi architecto autem aut odio similique laboriosam rem delectus
+      quos vel maxime! Nemo ullam architecto vel delectus vero. Aliquam, provident non
+      hic ipsum mollitia ut nulla architecto omnis aliquid tenetur! Quam esse totam
+      architecto voluptatibus dicta, obcaecati ducimus assumenda velit pariatur
+      explicabo id, excepturi non dolores dolor ex tempora.</p>
+  </footer>
+
+
 
 </body>
 

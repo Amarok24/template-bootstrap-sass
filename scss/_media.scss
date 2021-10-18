@@ -1,0 +1,45 @@
+// Media query helpers, optimised for Bootstrap 5.
+
+@use "sass:map";
+
+// Use default breakpoints or adapt to your own needs here.
+// See also https://getbootstrap.com/docs/5.0/layout/breakpoints/
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+// Usage:
+// @include min("md") { ...CSS... }
+@mixin min($breakpointName) {
+  @media screen and (min-width: map.get($breakpoints, $breakpointName)) {
+    @content;
+  }
+}
+
+// Usage:
+// @include max("lg") { ...CSS... }
+@mixin max($breakpointName) {
+  @media screen and (max-width: map.get($breakpoints, $breakpointName) - 1px) {
+    @content;
+  }
+}
+
+// Usage:
+// @include between("sm", "lg") { ...CSS... }
+@mixin between($breakpointNameMin, $breakpointNameMax) {
+  @media screen and (min-width: map.get($breakpoints, $breakpointNameMin)) and (max-width: map.get($breakpoints, $breakpointNameMax) - 1px) {
+    @content;
+  }
+}
+
+// Media query for all touchscreens
+@mixin touchscreen() {
+  @media (hover: none) and (pointer: coarse) {
+    @content;
+  }
+}

@@ -1,7 +1,14 @@
+@use 'fonts';
+
+//@use 'family';
+
+// Custom Bootstrap + components
 @use 'custom';
 
-$testcolor: #daba09;
+// Components
+@use 'components/buttons';
 
-.test-1 {
-  color: $testcolor;
-}
+// Sections
+@use 'sections/navbar';
+@use 'sections/header';
+@use 'sections/content';
