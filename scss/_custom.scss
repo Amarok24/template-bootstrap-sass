@@ -20,6 +20,19 @@ $spacer: 1rem;
       xxl: 1320px
     ),
  */
+    $display-font-sizes: (
+      // Controls the display-n classes
+      // https://getbootstrap.com/docs/5.0/content/typography/
+      //1: 5rem,
+      1: 6rem,
+      2: 4.5rem,
+      3: 4rem,
+      4: 3.5rem,
+      5: 3rem,
+      6: 2.5rem
+    ),
+    $display-font-weight: 400,
+
     $spacers: (
       0: 0,
       1: $spacer * 0.25,
