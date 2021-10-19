@@ -1,6 +1,6 @@
-const intersectApiSupported = ('IntersectionObserver' in window &&
-  'IntersectionObserverEntry' in window &&
-  'intersectionRatio' in window.IntersectionObserverEntry.prototype);
+const intersectApiSupported = (
+  'IntersectionObserver' in window &&
+  'IntersectionObserverEntry' in window);
 
 const pageNavWrapper = document.querySelector('#navbarControlled');
 const pageNavAnchors = document.querySelectorAll('#navbarControlled a');
