@@ -9,14 +9,16 @@ const youtubeVideoId = 'LaKT3pli5EQ';
 // ID (#) of CSS where Youtube API should generate the iframe.
 const videoCssId = 'customVideo';
 
-const intersectApiSupported = (
-  'IntersectionObserver' in window &&
-  'IntersectionObserverEntry' in window);
-
+const navBarCustomCssClass = 'navbar-js';
 const pageNavWrapper = document.querySelector('#navbarControlled');
 const pageNavAnchors = document.querySelectorAll('#navbarControlled a');
 const elemVideoModal = document.querySelector('#videoModal');
 const elemPlayButton = document.querySelector('.play-button');
+
+const intersectApiSupported = (
+  'IntersectionObserver' in window &&
+  'IntersectionObserverEntry' in window);
+
 let bsPageNav = null;
 let bsModal = null;
 let youtubePlayer = null;
@@ -58,7 +60,7 @@ function launchObserver() {
   };
 
   const pageNav = document.querySelector('#pageNav');
-  const customCssClass = 'navbar-custom';
+  const customCssClass = navBarCustomCssClass;
 
   let observer = new IntersectionObserver(handleIntersect, options);
   let elem = document.querySelector('.header-image');
