@@ -1,6 +1,7 @@
 /*
-  Author: Jan Prazak @ Monster
-  You can contact me in case of code issues.
+  Appendix script for Bootstrap + Sass template.
+  Author: Jan Prazak
+  https://github.com/Amarok24
 */
 
 // EDIT THIS TO CHANGE THE VIDEO! Video will be loaded on demand (page performance).
