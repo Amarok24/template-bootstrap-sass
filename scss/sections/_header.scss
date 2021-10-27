@@ -3,8 +3,7 @@
 
 .header-image {
   height: 400px;
-  background-image: url("../../assets/img/header.jpg");
-  background-image: url("../../assets/img/header.webp");
+  background-image: url("../../assets/img/header_1200x600.webp");
   background-repeat: no-repeat;
   background-position: 93% 0;
   background-size: auto 103%;
@@ -17,6 +16,7 @@
 
   @include media.min("md") {
     height: 40.3vw;
+    background-image: url("../../assets/img/header_1920x800.jpg");
     background-position: 0 0;
     background-size: cover;
     align-items: center;
