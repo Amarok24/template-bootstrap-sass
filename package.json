@@ -1,6 +1,6 @@
 {
   "name": "template-bootstrap-sass",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A clean starter template for Bootstrap and Sass.",
   "main": "index.js",
   "scripts": {

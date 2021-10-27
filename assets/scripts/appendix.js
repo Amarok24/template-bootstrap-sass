@@ -5,6 +5,8 @@
 
 // EDIT THIS TO CHANGE THE VIDEO! Video will be loaded on demand (page performance).
 const youtubeVideoId = 'LaKT3pli5EQ';
+// ID (#) of CSS where Youtube API should generate the iframe.
+const videoCssId = 'customVideo';
 
 const intersectApiSupported = (
   'IntersectionObserver' in window &&
@@ -91,7 +93,7 @@ function injectYoutubeApi() {
 
 // Part of YT API. This event fires automatically once API is ready.
 function onYouTubeIframeAPIReady() {
-  youtubePlayer = new YT.Player('customVideo', {
+  youtubePlayer = new YT.Player(videoCssId, {
     width: '560',
     height: '315',
     videoId: youtubeVideoId,
