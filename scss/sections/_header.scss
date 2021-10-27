@@ -2,59 +2,41 @@
 @use "../media";
 
 .header-image {
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.171) 5%, rgba(0, 0, 0, 0.205) 20%, rgba(0, 0, 0, 0.53) 80%),
-    url("../../assets/img/sunrise-6670717_1920.jpg");
-
-  background-size: cover;
+  height: 400px;
+  background-image: url("../../assets/img/header.jpg");
+  background-image: url("../../assets/img/header.webp");
   background-repeat: no-repeat;
-  background-position: 0 0;
-  height: 40vh;
-
-  @include media.min("lg") {
-    background-size: 100% auto;
-    height: 70vh;
-  }
-}
-
-%intro {
-  font-family: "Libre Franklin", sans-serif; // 400, 500, 600
-  font-weight: 600;
+  background-position: 93% 0;
+  background-size: auto 103%;
+  display: flex;
+  align-items: flex-end;
+  text-align: left;
+  justify-content: start;
   color: $cTextLight;
+  border-bottom: 12px solid $cBrandPrimary;
+
+  @include media.min("md") {
+    height: 40.3vw;
+    background-position: 0 0;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
-.intro {
-  @extend %intro;
-  padding-bottom: 7em;
-  height: 100%;
+.hero-text {
+  font-size: 2em;
+  font-weight: normal;
+  max-width: 900px;
 
-  @include media.max("xl") {
-    padding-top: 8em;
-    padding-bottom: 5em;
-  }
-
-  @include media.max("md") {
-    padding-top: 3em;
-    padding-bottom: 2em;
-  }
-
-  &--headline-1 {
-    @extend %intro;
-    font-size: 1.8em;
-    line-height: 1.3;
-
-    @include media.min("lg") {
-      font-size: 2.2em;
+  @include media.max("lg") {
+    a {
+      &.btn {
+        padding: 0.4em 1em;
+      }
     }
   }
 
-  &--headline-2 {
-    @extend %intro;
-    font-weight: 400;
-    font-size: 3em;
-    line-height: 1.2;
 
-    @include media.min("lg") {
-      font-size: 4em;
-    }
-  }
 }

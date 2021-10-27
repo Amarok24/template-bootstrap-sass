@@ -1,0 +1,36 @@
+@use "../palette" as *;
+@use "../media";
+
+footer {
+  //border-top: 12px solid $cBrandSecondary;
+
+  .social-icons {
+    a {
+      text-decoration: none;
+      display: inline-block;
+      margin-left: 0.5em;
+
+      svg {
+        max-width: 2em;
+        max-height: 2em;
+        text-decoration: none;
+        cursor: pointer;
+        color: $cTextLight;
+        transition: all 0.3s ease;
+      }
+
+      &:hover svg {
+        //color: $cBrandPrimary;
+        transform: scale(1.25);
+      }
+    }
+  }
+
+  .logo-footer {
+    margin: 2em 0 0 auto;
+    img {
+      max-width: 128px;
+      height: auto;
+    }
+  }
+}
