@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="*your_name_here*" />
 
   <title>Bootstrap + Sass project template</title>
 
@@ -12,7 +13,14 @@
 
   <link rel="manifest" href="./site.webmanifest" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet" />
 
   <script src="assets/scripts/bootstrap.bundle.min.js" defer="defer"></script>
   <script src="assets/scripts/appendix.js" defer="defer"></script>
@@ -22,11 +30,12 @@
   tabindex="0">
 
 
-  <nav id="pageNav" class="navbar navbar-expand-lg navbar-dark fixed-top">
 
-    <div class="container-sm">
+  <nav id="pageNav" class="navbar navbar-expand-lg navbar-light fixed-top">
+
+    <div class="container-md">
       <a class="navbar-brand" href="#">
-        <img src="assets/img/dummy_logo.svg" alt="Company" width="227" height="49" />
+        <img src="assets/img/dummy_logo.svg" alt="Dummy Logo" width="227" height="49" />
       </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -35,23 +44,22 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse " id="navbarControlled">
+      <div class="collapse navbar-collapse" id="navbarControlled">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="#home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#our_story">Our Story</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1"
-              aria-disabled="true">Disabled</a>
+            <a class="nav-link" href="#benefits">Benefits</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#anchorContent1">Content--1</a>
+            <a class="nav-link" href="#culture">Culture</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#anchorContent2">Content--2</a>
+            <a class="nav-link" href="#careers">Careers</a>
           </li>
         </ul>
 
@@ -61,463 +69,469 @@
 
 
   <header class="header-image">
-    &#160;
+    <div class="hero-text px-3 py-4">
+      <h1>
+        <span class="display-1">
+          Lorem ipsum
+        </span>
+        <br />
+        <span class="display-5 mt-0">
+          dolor sit amet consectetur.
+        </span>
+      </h1>
+      <a href="#careers" class="btn btn-primary fw-bold fs-5 mt-4">
+        Join our company
+      </a>
+    </div>
   </header>
 
-  <section class="container">
 
-    <div class="row">
-      <div class="col-md-6 col-lg-4">
+  <section id="our_story" class="bg-light">
+    <article class="container-md py-6 pb-1 pb-md-6">
 
-        <div class="my-3">
-          <p>Hello this is body text, Documentation and examples for common text
-            utilities to control alignment, wrapping, weight, and more.</p>
+      <div class="row gx-md-6">
+
+        <div class="col-md-6 order-last order-md-first mt-5 mt-md-0 story-background">
+          &#160;
         </div>
 
-        <div class="my-5">
-          <button type="button" class="btn btn-primary">Primary</button>
-          <button type="button" class="btn btn-secondary">Secondary</button>
-          <button type="button" class="btn btn-success">Success</button>
-          <button type="button" class="btn btn-danger">Danger</button>
-          <button type="button" class="btn btn-warning">Warning</button>
-          <button type="button" class="btn btn-info">Info</button>
-          <button type="button" class="btn btn-light">Light</button>
-          <button type="button" class="btn btn-dark">Dark</button>
-          <button type="button" class="btn btn-link">Link</button>
+        <div class="col-md-6 order-first order-md-last">
+
+          <h3 class="display-5">Our Story</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id quasi
+            voluptatibus veritatis, quisquam in doloribus architecto aspernatur iste,
+            inventore aliquid quidem aliquam fugit fugiat necessitatibus sed molestiae
+            nihil odit commodi sunt sapiente ea? Fugiat dignissimos, a porro enim
+            assumenda sit eaque debitis esse perferendis unde vero aperiam, expedita
+            dolorem aliquam earum dolores itaque, eos aspernatur fugit exercitationem
+            voluptas asperiores voluptatibus voluptatem libero.
+
+          </p>
+
+          <a href="#careers" class="btn fw-bold btn-custom">
+            Join our company
+          </a>
         </div>
 
-        <div class="my-5">
-          <button type="button" class="btn btn-outline-primary">Primary</button>
-          <button type="button" class="btn btn-outline-secondary">Secondary</button>
-          <button type="button" class="btn btn-outline-success">Success</button>
-          <button type="button" class="btn btn-outline-danger">Danger</button>
-          <button type="button" class="btn btn-outline-warning">Warning</button>
-          <button type="button" class="btn btn-outline-info">Info</button>
-          <button type="button" class="btn btn-outline-light">Light</button>
-          <button type="button" class="btn btn-outline-dark">Dark</button>
-        </div>
-
-        <div class="my-3">
-          <p class="fs-1">.fs-1 text</p>
-          <p class="fs-2">.fs-2 text</p>
-          <p class="fs-3">.fs-3 text</p>
-          <p class="fs-4">.fs-4 text</p>
-          <p class="fs-5">.fs-5 text</p>
-          <p class="fs-6">.fs-6 text</p>
-        </div>
-
-        <div class="my-3">
-          <h1 class="display-1">Display 1</h1>
-          <h1 class="display-2">Display 2</h1>
-          <h1 class="display-3">Display 3</h1>
-          <h1 class="display-4">Display 4</h1>
-          <h1 class="display-5">Display 5</h1>
-          <h1 class="display-6">Display 6</h1>
-        </div>
-
-        <div class="mt-5 mb-3">
-          <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-primary">Left</button>
-            <button type="button" class="btn btn-primary">Middle</button>
-            <button type="button" class="btn btn-primary">Right</button>
-          </div>
-        </div>
-
-        <div class="my-3">
-          <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-            <button type="button" class="btn btn-danger">Left</button>
-            <button type="button" class="btn btn-warning">Middle</button>
-            <button type="button" class="btn btn-success">Right</button>
-          </div>
-        </div>
-
-        <div class="my-3">
-          <div class="btn-group" role="group"
-            aria-label="Button group with nested dropdown">
-            <button type="button" class="btn btn-primary">1</button>
-            <button type="button" class="btn btn-primary">2</button>
-
-            <div class="btn-group" role="group">
-              <button id="btnGroupDrop1" type="button"
-                class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Dropdown
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="row mt-5 mb-3">
-            <div class="col-3 p-4 border border-primary me-2 my-2"></div>
-            <div class="col-3 p-4 border border-secondary me-2 my-2"></div>
-            <div class="col-3 p-4 border border-success me-2 my-2"></div>
-            <div class="col-3 p-4 border border-danger me-2 my-2"></div>
-            <div class="col-3 p-4 border border-warning me-2 my-2"></div>
-            <div class="col-3 p-4 border border-info me-2 my-2"></div>
-            <div class="col-3 p-4 border border-light me-2 my-2"></div>
-            <div class="col-3 p-4 border border-dark me-2 my-2"></div>
-            <div class="col-3 p-4 border border-white me-2 my-2"></div>
-          </div>
-
-          <div class="row my-3 d-flex d-block">
-            <div class="col-3 p-4 border border-1 me-2 my-2"></div>
-            <div class="col-3 p-4 border border-2 me-2 my-2"></div>
-            <div class="col-3 p-4 border border-3 me-2 my-2"></div>
-            <div class="col-3 p-4 border border-4 me-2 my-2"></div>
-            <div class="col-3 p-4 border border-5 me-2 my-2"></div>
-          </div>
-
-          <div class="my-3">
-            <table class="table table-bordered border-primary">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">First</th>
-                  <th scope="col">Last</th>
-                  <th scope="col">Handle</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td colspan="2">Larry the Bird</td>
-                  <td>@twitter</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
       </div>
 
-      <div class="col-md-6 col-lg-4">
-        <div class="my-3">
-          <div class="alert alert-primary" role="alert">
-            A simple primary alert—check it out!
-          </div>
-          <div class="alert alert-secondary" role="alert">
-            A simple secondary alert—check it out!
-          </div>
-          <div class="alert alert-success" role="alert">
-            A simple success alert—check it out!
-          </div>
-          <div class="alert alert-danger" role="alert">
-            A simple danger alert—check it out!
-          </div>
-          <div class="alert alert-warning" role="alert">
-            A simple warning alert—check it out!
-          </div>
-          <div class="alert alert-info" role="alert">
-            A simple info alert—check it out!
-          </div>
-          <div class="alert alert-light" role="alert">
-            A simple light alert—check it out!
-          </div>
-          <div class="alert alert-dark" role="alert">
-            A simple dark alert—check it out!
-          </div>
-        </div>
 
-        <div class="my-3">
-          <div class="accordion" id="accordionPanelsStayOpenExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                  aria-controls="panelsStayOpen-collapseOne">
-                  Accordion Item #1
-                </button>
-              </h2>
-              <div id="panelsStayOpen-collapseOne"
-                class="accordion-collapse collapse show"
-                aria-labelledby="panelsStayOpen-headingOne">
-                <div class="accordion-body">
-                  <strong>This is the first item's accordion body.</strong> It is shown
-                  by
-                  default, until the collapse plugin adds the appropriate classes that
-                  we
-                  use to style each element. These classes control the overall
-                  appearance,
-                  as well as the showing and hiding via CSS transitions. You can modify
-                  any of this with custom CSS or overriding our default variables. It's
-                  also worth noting that just about any HTML can go within the
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                <button class="accordion-button collapsed" type="button"
-                  data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
-                  aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                  Accordion Item #2
-                </button>
-              </h2>
-              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
-                aria-labelledby="panelsStayOpen-headingTwo">
-                <div class="accordion-body">
-                  <strong>This is the second item's accordion body.</strong> It is
-                  hidden
-                  by default, until the collapse plugin adds the appropriate classes
-                  that
-                  we use to style each element. These classes control the overall
-                  appearance, as well as the showing and hiding via CSS transitions. You
-                  can modify any of this with custom CSS or overriding our default
-                  variables. It's also worth noting that just about any HTML can go
-                  within
-                  the <code>.accordion-body</code>, though the transition does limit
-                  overflow.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                <button class="accordion-button collapsed" type="button"
-                  data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
-                  aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                  Accordion Item #3
-                </button>
-              </h2>
-              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
-                aria-labelledby="panelsStayOpen-headingThree">
-                <div class="accordion-body">
-                  <strong>This is the third item's accordion body.</strong> It is hidden
-                  by default, until the collapse plugin adds the appropriate classes
-                  that
-                  we use to style each element. These classes control the overall
-                  appearance, as well as the showing and hiding via CSS transitions. You
-                  can modify any of this with custom CSS or overriding our default
-                  variables. It's also worth noting that just about any HTML can go
-                  within
-                  the <code>.accordion-body</code>, though the transition does limit
-                  overflow.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="my-3">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">Library</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Data</li>
-            </ol>
-          </nav>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="my-3">
-          <span class="badge bg-primary">Primary</span>
-          <span class="badge bg-secondary">Secondary</span>
-          <span class="badge bg-success">Success</span>
-          <span class="badge bg-danger">Danger</span>
-          <span class="badge bg-warning text-dark">Warning</span>
-          <span class="badge bg-info text-dark">Info</span>
-          <span class="badge bg-light text-dark">Light</span>
-          <span class="badge bg-dark">Dark</span>
-        </div>
-        <div class="my-3">
-          <span class="badge rounded-pill bg-primary">Primary</span>
-          <span class="badge rounded-pill bg-secondary">Secondary</span>
-          <span class="badge rounded-pill bg-success">Success</span>
-          <span class="badge rounded-pill bg-danger">Danger</span>
-          <span class="badge rounded-pill bg-warning text-dark">Warning</span>
-          <span class="badge rounded-pill bg-info text-dark">Info</span>
-          <span class="badge rounded-pill bg-light text-dark">Light</span>
-          <span class="badge rounded-pill bg-dark">Dark</span>
-        </div>
-
-        <div class="my-3">
-          <div class="card text-white bg-primary mb-3">
-            <div class="card-header">Header</div>
-            <div class="card-body">
-              <h5 class="card-title">Primary card title</h5>
-              <p class="card-text">Some quick example text to build on the card title
-                and
-                make up the bulk of the card's content.</p>
-            </div>
-          </div>
-          <div class="card text-white bg-secondary mb-3">
-            <div class="card-header">Header</div>
-            <div class="card-body">
-              <h5 class="card-title">Secondary card title</h5>
-              <p class="card-text">Some quick example text to build on the card title
-                and
-                make up the bulk of the card's content.</p>
-            </div>
-          </div>
-          <div class="card text-white bg-success mb-3">
-            <div class="card-header">Header</div>
-            <div class="card-body">
-              <h5 class="card-title">Success card title</h5>
-              <p class="card-text">Some quick example text to build on the card title
-                and
-                make up the bulk of the card's content.</p>
-            </div>
-          </div>
-          <div class="card text-white bg-danger mb-3">
-            <div class="card-header">Header</div>
-            <div class="card-body">
-              <h5 class="card-title">Danger card title</h5>
-              <p class="card-text">Some quick example text to build on the card title
-                and
-                make up the bulk of the card's content.</p>
-            </div>
-          </div>
-          <div class="card text-dark bg-warning mb-3">
-            <div class="card-header">Header</div>
-            <div class="card-body">
-              <h5 class="card-title">Warning card title</h5>
-              <p class="card-text">Some quick example text to build on the card title
-                and
-                make up the bulk of the card's content.</p>
-            </div>
-          </div>
-          <div class="card text-dark bg-info mb-3">
-            <div class="card-header">Header</div>
-            <div class="card-body">
-              <h5 class="card-title">Info card title</h5>
-              <p class="card-text">Some quick example text to build on the card title
-                and
-                make up the bulk of the card's content.</p>
-            </div>
-          </div>
-          <div class="card text-dark bg-light mb-3">
-            <div class="card-header">Header</div>
-            <div class="card-body">
-              <h5 class="card-title">Light card title</h5>
-              <p class="card-text">Some quick example text to build on the card title
-                and
-                make up the bulk of the card's content.</p>
-            </div>
-          </div>
-          <div class="card text-white bg-dark mb-3">
-            <div class="card-header">Header</div>
-            <div class="card-body">
-              <h5 class="card-title">Dark card title</h5>
-              <p class="card-text">Some quick example text to build on the card title
-                and
-                make up the bulk of the card's content.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-  <section id="anchorContent1" class="content--1">
-    <article class="container py-6">
-      <h3>Content--1</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam fugiat sint iure,
-        ut enim debitis, nostrum eligendi eius veniam quasi harum quia quas hic aliquam,
-        unde ab. Repellendus fugiat expedita asperiores saepe dolor. Maiores delectus
-        temporibus perspiciatis quos vero animi, error fuga dolores, ipsa nostrum porro
-        iusto molestias sequi eaque nisi quae ullam quis mollitia aliquid! Fugit,
-        similique quia. Optio quod voluptas aspernatur ducimus labore vitae pariatur iste
-        sed repellat harum similique officia, nam qui excepturi explicabo dolore possimus
-        nostrum laudantium corporis rerum, assumenda animi incidunt perspiciatis rem! Quia
-        adipisci laudantium itaque ipsa accusamus laborum ex, magni error, quas voluptas
-        totam, quos nesciunt ullam. Voluptatem, ducimus ex veniam vero assumenda tempora
-        quibusdam iure, culpa fugit possimus, maxime facilis quasi. Fuga exercitationem
-        hic non minus accusamus quas laboriosam ducimus, neque sint eaque officiis nihil
-        dicta excepturi odit veniam ut facilis ullam, obcaecati labore? Est asperiores,
-        labore itaque corporis id inventore explicabo optio quos facere ut maxime in
-        expedita quisquam rerum beatae doloribus mollitia fuga debitis odit! Quis
-        accusamus dicta debitis assumenda minus eius, doloribus, pariatur eos, ab quas
-        quos molestias quaerat quod? Quis quidem, minima ipsam corrupti repellendus hic
-        explicabo a quod, eaque magnam optio itaque incidunt est velit sunt iusto nam,
-        iure commodi suscipit! Quo necessitatibus quod numquam beatae laboriosam pariatur
-        nostrum debitis. Ab quia nostrum, aspernatur quibusdam reprehenderit doloremque
-        tenetur eos facere quasi! Eum beatae excepturi doloremque cum labore iusto modi
-        laudantium rerum aspernatur atque, repellendus suscipit illum quidem voluptatem
-        eaque nostrum delectus maxime facere, id expedita nam quas consectetur asperiores
-        voluptatum. Ipsa, explicabo exercitationem, nostrum aperiam in hic adipisci beatae
-        incidunt ratione autem tempora error optio iste harum totam sunt? Modi, totam
-        corporis consequuntur autem ab repellendus dolor, quisquam odio et sequi
-        veritatis, itaque quibusdam quia veniam? Quo eius, unde quia quidem nulla alias
-        nemo cupiditate vitae quasi.</p>
     </article>
   </section>
 
 
-  <section id="anchorContent2" class="content--2">
+  <section id="benefits">
     <article class="container-md py-6">
-      <h3>Content--2</h3>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat aspernatur ut
-        ducimus officiis laborum illo velit amet minima expedita beatae quas, dignissimos
-        inventore dolore veritatis adipisci officia molestias autem sint ab error maxime
-        neque, cum et. Iusto beatae ut perferendis dolorem natus, porro minima repellat.
-        Et rerum, labore deleniti quas omnis placeat debitis eligendi obcaecati, minus
-        esse hic corrupti veniam maxime sapiente doloremque tenetur cumque, voluptates
-        consequatur quos. Dolor dicta ut nulla repudiandae dignissimos incidunt ullam
-        alias, velit dolorum unde id sequi necessitatibus odio, eligendi pariatur facere
-        deleniti ratione! Hic est perspiciatis illo exercitationem repellendus soluta
-        praesentium fugit perferendis repudiandae consequuntur dolore sunt aliquam,
-        commodi reprehenderit amet odit, dolorem, tempora deserunt. Consectetur magni ut
-        minus, natus, amet labore sapiente recusandae molestias minima quam repudiandae
-        qui dolorum aperiam odit, repellendus nesciunt dicta iusto. Aliquam, aperiam
-        tenetur neque voluptas nostrum dolorem dolor ducimus quaerat blanditiis
-        repellendus sit qui obcaecati beatae minima odio, quam voluptatibus. Debitis
-        ratione quod maiores voluptatibus veniam libero quidem. Quos, reiciendis quaerat.
-        Iste quas aut harum, quo facilis voluptatibus distinctio tenetur facere fugit
-        vitae illo eaque sed quam exercitationem eum reprehenderit expedita velit pariatur
-        numquam! Odit ullam illum nemo sint voluptate quod ducimus ea non exercitationem
-        saepe expedita aperiam animi dolorem soluta officiis asperiores facilis minima
-        hic, commodi, quo veritatis ipsa porro. Enim ullam, nobis ipsa dolores ut sapiente
-        ratione praesentium cupiditate temporibus quaerat magni ducimus, repellendus,
-        consequuntur fugit facere! Doloremque pariatur tempora natus voluptates ad vero
-        nemo, quidem mollitia culpa cupiditate architecto modi, deleniti rem quis,
-        possimus rerum porro illum. Facilis voluptatibus fuga quibusdam maxime, enim
-        aperiam doloribus nisi natus.</p>
+      <h3 class="display-5 text-center">Benefits</h3>
+
+      <div
+        class="row row-cols-2 row-cols-sm-3 row-cols-md-4 mt-1 fs-5 gy-4 gy-sm-6 benefits-list">
+
+        <div class="col">
+          <img src="assets/icons/card-image.svg" alt="Benefit" width="16" height="16" />
+          <span class="benefits-item-text">Benefit text</span>
+        </div>
+
+        <div class="col">
+          <img src="assets/icons/card-image.svg" alt="Benefit" width="16" height="16" />
+          <span class="benefits-item-text">Benefit text</span>
+        </div>
+
+        <div class="col">
+          <img src="assets/icons/card-image.svg" alt="Benefit" width="16" height="16" />
+          <span class="benefits-item-text">Benefit text</span>
+        </div>
+
+        <div class="col">
+          <img src="assets/icons/card-image.svg" alt="Benefit" width="16" height="16" />
+          <span class="benefits-item-text">Benefit text</span>
+        </div>
+
+        <div class="col">
+          <img src="assets/icons/card-image.svg" alt="Benefit" width="16" height="16" />
+          <span class="benefits-item-text">Benefit text</span>
+        </div>
+
+        <div class="col">
+          <img src="assets/icons/card-image.svg" alt="Benefit" width="16" height="16" />
+          <span class="benefits-item-text">Benefit text</span>
+        </div>
+
+        <div class="col">
+          <img src="assets/icons/card-image.svg" alt="Benefit" width="16" height="16" />
+          <span class="benefits-item-text">Benefit text</span>
+        </div>
+
+        <div class="col">
+          <img src="assets/icons/card-image.svg" alt="Benefit" width="16" height="16" />
+          <span class="benefits-item-text">Benefit text</span>
+        </div>
+
+      </div>
+
     </article>
   </section>
 
-  <footer class="container-md">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto magnam unde
-      ducimus sint iste pariatur expedita eos fugiat consectetur culpa possimus ipsam
-      libero officiis laborum a ab praesentium quibusdam, blanditiis similique! A
-      recusandae blanditiis nostrum debitis perspiciatis expedita explicabo,
-      voluptatibus eveniet sed facere quia laborum excepturi doloremque illo at tempora!
-      Eius voluptas minima inventore, quod qui nihil veritatis rerum recusandae illo
-      maiores doloremque impedit delectus obcaecati tenetur deleniti dolorem error
-      accusamus repudiandae voluptates omnis voluptatem soluta quisquam!</p>
-    <p>Saepe libero, perspiciatis dolorum atque ut culpa vitae tenetur magni soluta
-      animi vero recusandae veniam nesciunt consectetur accusantium similique
-      aspernatur, natus impedit unde cupiditate dignissimos fugiat assumenda a. Harum
-      ipsa dolorem asperiores voluptate eligendi veniam sapiente necessitatibus eveniet
-      quidem, praesentium iusto, esse est. Lorem ipsum, dolor sit amet consectetur
-      adipisicing elit. </p>
-    <p>Minima sequi accusamus voluptas suscipit consequatur itaque eligendi dicta
-      voluptatem tempora numquam, ipsa sed voluptatum sit impedit cum. Omnis libero cum
-      nostrum voluptates mollitia, ex, delectus consectetur esse impedit quod deleniti
-      alias assumenda sit natus accusantium itaque minima? Ea minima ab aut, architecto
-      earum impedit dicta molestias suscipit? Dolorum maiores provident illo laudantium
-      deserunt nihil, suscipit delectus dolore ut voluptate ab nobis natus tempore ea
-      vel beatae cum consectetur ducimus! Cum, nulla a.</p>
-    <p>In porro necessitatibus accusantium libero provident repellat sunt nostrum,
-      consequuntur eligendi architecto autem aut odio similique laboriosam rem delectus
-      quos vel maxime! Nemo ullam architecto vel delectus vero. Aliquam, provident non
-      hic ipsum mollitia ut nulla architecto omnis aliquid tenetur! Quam esse totam
-      architecto voluptatibus dicta, obcaecati ducimus assumenda velit pariatur
-      explicabo id, excepturi non dolores dolor ex tempora.</p>
+  <section id="culture" class="bg-secondary text-light">
+    <article class="container-md px-4 px-xl-0 pt-6 pb-4 pb-md-6">
+      <h3 class="display-5 text-center">Culture</h3>
+
+      <div class="row text-center justify-content-center mt-4 mb-5">
+        <div class="col-md-8">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint molestiae ex, vero
+          ea enim iusto minima inventore accusantium. Repudiandae dolores fuga consequatur
+          eveniet rem. Sapiente ullam voluptate ducimus molestias, ad fugit sint error?
+          Cupiditate obcaecati, ipsa distinctio quia porro aut aspernatur, perferendis
+          minima recusandae debitis veniam qui soluta expedita consequatur?
+        </div>
+      </div>
+
+      <div class="video-thumbnail">
+        <img src="assets/img/video_thumb.jpg" alt="" loading="lazy" width="1920"
+          height="1080" class="img-fluid" />
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 173 173" class="play-button"
+          alt="PLAY VIDEO" data-bs-toggle="modal" data-bs-target="#videoModal">
+          <g transform="translate(-60.7 -29.3)">
+            <circle r="86.5" cy="115.8" cx="147.2" class="play-btn-background"
+              opacity=".5" />
+            <circle r="76.6" cy="115.8" cx="147.2" class="play-btn-ring" fill="none"
+              stroke="currentColor" stroke-width="3.8" />
+            <path class="play-btn-arrow" d="M117.7 71.7V160l76.8-47.4z"
+              fill="currentColor" />
+          </g>
+        </svg>
+      </div>
+
+      <div id="videoModal" class="modal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-body">
+
+              <div id="customVideo">
+                <p>Loading video...</p>
+                <!--
+                Video will be loaded on demand (page performance).
+                This DIV will automatically change into an iframe with YouTube video.
+                Insert correct YouTube video ID into appendix.js
+              -->
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+    </article>
+  </section>
+
+  <section id="careers">
+    <article class="container-md py-6">
+      <h3 class="display-5 text-center">Careers</h3>
+
+      <div class="row text-center justify-content-center mt-4 mb-6">
+        <div class="col-md-8">
+          Review our open positions and join our company today!
+        </div>
+      </div>
+
+
+      <div class="jobsearch-wrapper p-1 p-md-0">
+
+        <form class="row g-4 align-items-end">
+
+          <div class="col-lg-4">
+            <label for="inputKeywords" class="form-label">
+              Search by keywords
+            </label>
+            <input type="text" class="form-control" id="inputKeywords"
+              placeholder="Enter keywords" aria-label="Enter keywords" />
+          </div>
+
+
+          <div class="col-lg-3">
+            <label for="inputCategory" class="form-label">Categories</label>
+            <select id="inputCategory" class="form-select">
+              <option selected="selected">All</option>
+              <option value="281" title="Applications Development">
+                Applications Development
+              </option>
+              <option value="285" title="Engineering">
+                Engineering
+              </option>
+              <option value="288" title="Finance">
+                Finance
+              </option>
+              <option value="287" title="Human Resources">
+                Human Resources
+              </option>
+              <option value="280" title="Manufacturing">
+                Manufacturing
+              </option>
+              <option value="282" title="Mktg Sales NBD">
+                Mktg Sales NBD
+              </option>
+              <option value="236" title="Purchasing">
+                Purchasing
+              </option>
+              <option value="283" title="Research &amp; Development">
+                Research &amp; Development
+              </option>
+              <option value="286" title="Safety Health and Env">
+                Safety Health and Env
+              </option>
+              <option value="89" title="Sales Support/Assistance">
+                Sales Support/Assistance
+              </option>
+              <option value="284" title="Supply Chain">
+                Supply Chain
+              </option>
+              <option value="279" title="Supply Chain/Logistics">
+                Supply Chain/Logistics
+              </option>
+            </select>
+          </div>
+
+          <div class="col-lg-3">
+            <label for="inputLocation" class="form-label">Locations</label>
+            <select id="inputLocation" class="form-select">
+              <option selected="selected">All</option>
+              <option value="US-AZ" title="Arizona">
+                Arizona
+              </option>
+              <option value="US-GA" title="Georgia">
+                Georgia
+              </option>
+              <option value="US-IL" title="Illinois">
+                Illinois
+              </option>
+              <option value="US-KY" title="Kentucky">
+                Kentucky
+              </option>
+              <option value="US-LA" title="Louisiana">
+                Louisiana
+              </option>
+              <option value="US-MA" title="Massachusetts">
+                Massachusetts
+              </option>
+              <option value="US-OK" title="Oklahoma">
+                Oklahoma
+              </option>
+              <option value="US-TX" title="Texas">
+                Texas
+              </option>
+            </select>
+          </div>
+
+          <div class="col-lg-2">
+            <button type="submit"
+              class="btn btn-primary text-center fw-bold fs-5 w-100">Search</button>
+          </div>
+
+          <div class="col-12 text-end mb-2">
+            <a href="#">Reset search</a>
+          </div>
+
+          <div class="fs-4 ps-3 mb-3">
+            Results: 6 of 31
+          </div>
+
+        </form>
+
+        <div class="jobsearch-data">
+
+          <header class="row">
+            <div class="col-5 fw-bold">Job Title</div>
+            <div class="col-4 fw-bold">Category</div>
+            <div class="col-3 fw-bold">Location</div>
+          </header>
+
+          <dl class="row">
+            <dd class="col-md-5"><a href="#">Senior JAVA Developer</a></dd>
+            <dd class="col-md-4">Financial</dd>
+            <dd class="col-md-3">Omaha, NE</dd>
+          </dl>
+
+          <dl class="row">
+            <dd class="col-md-5"><a href="#">Mechanical Engineer</a></dd>
+            <dd class="col-md-4">Financial</dd>
+            <dd class="col-md-3">Omaha, NE</dd>
+          </dl>
+
+          <dl class="row">
+            <dd class="col-md-5"><a href="#">Computer Engineer</a></dd>
+            <dd class="col-md-4">Information Technology</dd>
+            <dd class="col-md-3">Omaha, NE</dd>
+          </dl>
+
+          <dl class="row">
+            <dd class="col-md-5"><a href="#">Cloud Engineer</a></dd>
+            <dd class="col-md-4">Financial</dd>
+            <dd class="col-md-3">Birmingham, AL</dd>
+          </dl>
+
+          <dl class="row">
+            <dd class="col-md-5"><a href="#">Test Engineer II</a></dd>
+            <dd class="col-md-4">Financial</dd>
+            <dd class="col-md-3">Omaha, NE</dd>
+          </dl>
+
+          <dl class="row">
+            <dd class="col-md-5"><a href="#">Front Desk Security Officer</a></dd>
+            <dd class="col-md-4">Professional</dd>
+            <dd class="col-md-3">Omaha, NE</dd>
+          </dl>
+
+        </div>
+
+
+        <nav aria-label="JobSearch page navigation"
+          class="jobsearch-data-pagination mt-5">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+              <a class="page-link pageSkip" href="#" tabindex="-1" aria-disabled="true"
+                aria-label="Previous page" title="Previous page"><span
+                  aria-hidden="true">&laquo;</span></a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">&hellip;</a></li>
+            <li class="page-item">
+              <a class="page-link pageSkip" href="#" aria-label="Next page"
+                title="Next page">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+
+      </div>
+
+
+    </article>
+  </section>
+
+
+  <section style="background-color: #d8e1f3;">
+    <article class="container-md pt-6 pb-1 pb-md-6">
+
+      <h3 class="display-5 text-center">Bootstrap</h3>
+
+      <div class="my-5">
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-light">Light</button>
+        <button type="button" class="btn btn-dark">Dark</button>
+        <button type="button" class="btn btn-link">Link</button>
+      </div>
+
+      <div class="my-5">
+        <button type="button" class="btn btn-outline-primary">Primary</button>
+        <button type="button" class="btn btn-outline-secondary">Secondary</button>
+        <button type="button" class="btn btn-outline-success">Success</button>
+        <button type="button" class="btn btn-outline-danger">Danger</button>
+        <button type="button" class="btn btn-outline-warning">Warning</button>
+        <button type="button" class="btn btn-outline-info">Info</button>
+        <button type="button" class="btn btn-outline-light">Light</button>
+        <button type="button" class="btn btn-outline-dark">Dark</button>
+      </div>
+
+      <div class="my-5">
+        <p class="fs-1">fs-1 lorem ipsum</p>
+        <p class="fs-2">fs-2 lorem ipsum</p>
+        <p class="fs-3">fs-3 lorem ipsum</p>
+        <p class="fs-4">fs-4 lorem ipsum</p>
+        <p class="fs-5">fs-5 lorem ipsum</p>
+        <p class="fs-6">fs-6 lorem ipsum</p>
+      </div>
+
+      <div class="my-5">
+        <h2 class="display-1">display-1</h2>
+        <h2 class="display-2">display-2</h2>
+        <h2 class="display-3">display-3</h2>
+        <h2 class="display-4">display-4</h2>
+        <h2 class="display-5">display-5</h2>
+        <h2 class="display-6">display-6</h2>
+      </div>
+
+    </article>
+  </section>
+
+  <footer class="bg-secondary text-light">
+    <article class="container-md py-4 py-sm-6 fs-6">
+      <div class="row gy-5">
+        <div class="col-lg-8">
+          &copy; 2021 Dummy Company<br />
+          <br />
+          Disclaimer Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+          assumenda cumque expedita consequuntur nesciunt veniam illo, iusto numquam,
+          provident nostrum iure commodi odit sequi minima dolores reprehenderit
+          explicabo. Minus dolore dicta cupiditate, ullam nam porro corrupti
+          reprehenderit! Iure blanditiis, voluptatibus sint neque exercitationem itaque
+          reprehenderit. Quis nemo dicta soluta consequuntur.
+        </div>
+        <div class="col-lg-4 text-end social-icons">
+          <a href="#">
+            <svg alt="LinkedIn" title="LinkedIn" loading="lazy">
+              <use href="assets/icons/social-networks.svg#icon-linkedin-square" />
+            </svg>
+          </a>
+          <a href="#" target="_blank">
+            <svg alt="Twitter" title="Twitter" loading="lazy">
+              <use href="assets/icons/social-networks.svg#icon-twitter-square" />
+            </svg>
+          </a>
+          <a href="#" target="_blank">
+            <svg alt="Facebook" title="Facebook" loading="lazy">
+              <use href="assets/icons/social-networks.svg#icon-facebook-square" />
+            </svg>
+          </a>
+          <a href="#">
+            <svg alt="Instagram" title="Instagram" loading="lazy">
+              <use href="assets/icons/social-networks.svg#icon-instagram-square" />
+            </svg>
+          </a>
+          <a href="#" target="_blank">
+            <svg alt="YouTube" title="YouTube" loading="lazy">
+              <use href="assets/icons/social-networks.svg#icon-youtube-square" />
+            </svg>
+          </a>
+          <a href="#">
+            <svg alt="Pinterest" title="Pinterest" loading="lazy">
+              <use href="assets/icons/social-networks.svg#icon-pinterest-square" />
+            </svg>
+          </a>
+          <!--
+          <a href="#">
+            <svg alt="Xing" title="Xing" loading="lazy">
+              <use href="assets/icons/social-networks.svg#icon-xing-square" />
+            </svg>
+          </a>
+-->
+        </div>
+
+      </div>
+
+
+      <div class="text-start text-lg-end logo-footer">
+        <a href="#" target="_blank">
+          <img src="assets/img/dummy_logo_footer.svg" alt="Dummy Company" width="227"
+            height="49" />
+        </a>
+      </div>
+
+    </article>
   </footer>
+
 
 
 

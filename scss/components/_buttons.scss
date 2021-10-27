@@ -3,20 +3,18 @@
 %btn-custom {
   font-size: inherit;
   text-align: center;
-  font-family: "Libre Franklin", sans-serif;
-  font-weight: 600;
-  border: 2px solid #e7e7e7;
-  border-radius: 10px;
-  padding: 16px 24px;
-  display: inline-block;
-  color: $cTextLight;
+  border: 2px solid $cButton2;
+  border-radius: 0;
+  color: $cButton2;
+  background-color: $cTextLight;
+  padding: 0.5em 1.3em;
 }
 
 .btn-custom {
   @extend %btn-custom;
 
-  &--small {
-    @extend %btn-custom;
-    padding: 12px 20px;
+  &:hover {
+    outline: 1px solid $cBrandSecondary;
+    color: $cButton2;
   }
 }

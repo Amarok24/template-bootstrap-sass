@@ -1,10 +1,33 @@
+/*
+  Author: Jan Prazak @ Monster
+  You can contact me in case of code issues.
+*/
+
+// EDIT THIS TO CHANGE THE VIDEO! Video will be loaded on demand (page performance).
+const youtubeVideoId = 'LaKT3pli5EQ';
+
 const intersectApiSupported = (
   'IntersectionObserver' in window &&
   'IntersectionObserverEntry' in window);
 
 const pageNavWrapper = document.querySelector('#navbarControlled');
 const pageNavAnchors = document.querySelectorAll('#navbarControlled a');
+const elemVideoModal = document.querySelector('#videoModal');
+const elemPlayButton = document.querySelector('.play-button');
 let bsPageNav = null;
+let bsModal = null;
+let youtubePlayer = null;
+let youtubeApiInjected = false;
+
+
+if (elemVideoModal && elemPlayButton) {
+  bsModal = bootstrap.Modal.getOrCreateInstance(elemVideoModal);
+  elemVideoModal.addEventListener('hidden.bs.modal', function (ev) {
+    if (youtubePlayer) youtubePlayer.pauseVideo();
+  });
+  elemPlayButton.addEventListener('click', injectYoutubeApi);
+}
+
 
 if (pageNavWrapper && pageNavAnchors) {
   //bsPageNav = new bootstrap.Collapse(pageNavWrapper, {toggle: false});
@@ -28,11 +51,11 @@ function launchObserver() {
   const options = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.1
+    threshold: 0.3
   };
 
   const pageNav = document.querySelector('#pageNav');
-  const customCssClass = 'bg-extra-dark';
+  const customCssClass = 'navbar-custom';
 
   let observer = new IntersectionObserver(handleIntersect, options);
   let elem = document.querySelector('.header-image');
@@ -49,6 +72,47 @@ function launchObserver() {
       }
     }
   }
+}
+
+
+function injectYoutubeApi() {
+  if (youtubeApiInjected) {
+    youtubePlayer.playVideo();
+    return;
+  }
+  const tagScript = document.createElement('script');
+  tagScript.src = 'https://www.youtube.com/iframe_api';
+  let firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tagScript, firstScriptTag);
+  console.log("YouTube API code injected");
+  youtubeApiInjected = true;
+}
+
+
+// Part of YT API. This event fires automatically once API is ready.
+function onYouTubeIframeAPIReady() {
+  youtubePlayer = new YT.Player('customVideo', {
+    width: '560',
+    height: '315',
+    videoId: youtubeVideoId,
+    playerVars: {
+      // See https://developers.google.com/youtube/player_parameters
+      'playsinline': 1,
+      'rel': 0,
+      'modestbranding': 1
+    },
+    events: {
+      'onReady': onPlayerReady
+      //'onStateChange': onPlayerStateChange
+    }
+  });
+}
+
+// This event fires when player has finished loading and is ready.
+function onPlayerReady(ev) {
+  //const embedCode = ev.target.getVideoEmbedCode();
+  //ev.target.playVideo();
+  youtubePlayer.playVideo();
 }
 
 

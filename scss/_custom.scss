@@ -1,72 +1,123 @@
 @use "palette" as *;
 @use "media";
 
-$accordion-icon-active-color: $cBrandPrimary;
+
+// CUSTOM Bootstrap variables:
+
+$grid-breakpoints: media.$breakpoints;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  //xl: 1140px,
+  //xxl: 1320px
+  xl: 1000px,
+  xxl: 1140px,
+);
+
 $spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 5,
+  7: $spacer * 7.5,
+  8: $spacer * 10.5,
+  9: $spacer * 14,
+);
 
-// Import whole Bootstrap library, with own parameters.
-// Default Bootstrap variables are located in:
-// node_modules/bootstrap/scss/_variables.scss
-@use "../node_modules/bootstrap/scss/bootstrap" with
-  (
-    $primary: $cBrandPrimary,
-    $secondary: $cBrandSecondary,
-    $dark: $cBrandTertiary,
-/*     $container-max-widths: (
-      sm: 540px,
-      md: 720px,
-      lg: 960px,
-      xl: 1140px,
-      xxl: 1320px
-    ),
- */
-    $display-font-sizes: (
-      // Controls the display-n classes
-      // https://getbootstrap.com/docs/5.0/content/typography/
-      //1: 5rem,
-      1: 6rem,
-      2: 4.5rem,
-      3: 4rem,
-      4: 3.5rem,
-      5: 3rem,
-      6: 2.5rem
-    ),
-    $display-font-weight: 400,
+$primary: $cBrandPrimary;
+$secondary: $cBrandSecondary;
+$warning: #ff7b00;
 
-    $spacers: (
-      0: 0,
-      1: $spacer * 0.25,
-      2: $spacer * 0.5,
-      3: $spacer,
-      4: $spacer * 1.5,
-      5: $spacer * 3,
-      6: $spacer * 5,
-      7: $spacer * 7.5,
-      8: $spacer * 10.5,
-      9: $spacer * 14,
-    ),
-    $grid-breakpoints: media.$breakpoints,
+$display-font-sizes: (
+  // Controls the display-n classes
+  // https://getbootstrap.com/docs/5.0/content/typography/
+  //1: 5rem,
+  1: 6rem,
+  2: 4.5rem,
+  3: 4rem,
+  4: 3.5rem,
+  5: 3rem,
+  6: 2.5rem,
+);
+$display-font-weight: 400;
+$display-line-height: 1;
 
-    $navbar-dark-color: rgb(206, 181, 43),
-    $navbar-dark-hover-color: white,
-    $navbar-dark-active-color: white,
-    $navbar-dark-disabled-color: silver,
-    $navbar-dark-brand-color: white,
-    $navbar-dark-brand-hover-color: inherit,
 
-    //card-cap == card HEADER & FOOTER
-    $card-cap-padding-x: 1.5rem,
-    $card-cap-padding-y: 1.5rem,
-    $accordion-icon-width: 1.5rem,
-    // If variables inside of data are used then they have to be defined in outer scope
-    // Here it is #{$accordion-icon-active-color}
-    // https://icons.getbootstrap.com/icons/plus-square/
-    $accordion-button-icon:
-      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-plus-square' viewBox='0 0 16 16'><path d='M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z'/><path d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/></svg>"),
-    // https://icons.getbootstrap.com/icons/dash-square/
-    $accordion-button-active-icon:
-      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#{$accordion-icon-active-color}' class='bi bi-dash-square' viewBox='0 0 16 16'><path d='M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z'/><path d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/></svg>")
-  );
+$navbar-light-color: $cBrandSecondary;
+$navbar-light-hover-color: $cBrandSecondary;
+$navbar-light-active-color: $cBrandSecondary;
+$navbar-light-disabled-color: silver;
+$navbar-light-brand-color: $cBrandSecondary;
+$navbar-light-brand-hover-color: inherit;
+$btn-border-radius: 0;
+$btn-padding-x: 1.6em;
+$btn-padding-y: 0.8em;
+//$btn-hover-bg-shade-amount: 15%,
+$btn-hover-bg-tint-amount:  30%;
+$form-label-color: $cTextDark;
+$form-select-border-color: $cButton2;
+$input-border-color: $cButton2;
+$input-border-width: 2px;
+$input-border-radius: 0;
+$component-active-bg: $cButton2;
+$pagination-color: #707070;
+$pagination-active-color: white;
+$pagination-active-bg: $cBrandPrimary;
+$pagination-padding-y: 0.5rem;
+$pagination-padding-x: 1.2rem;
+$pagination-disabled-bg: #f0f0f0;
+$pagination-border-radius: 0;
+$pagination-hover-color: $cTextDark;
+//$pagination-hover-bg: $cBrandSecondary,
 
-// Old *deprecated* way to import external scss:
-// @import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+// Configuration
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/utilities";
+
+// Layout & components
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+//@import "../node_modules/bootstrap/scss/tables";
+@import "../node_modules/bootstrap/scss/forms";
+@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/transitions";
+@import "../node_modules/bootstrap/scss/dropdown";
+//@import "../node_modules/bootstrap/scss/button-group";
+@import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/navbar";
+//@import "../node_modules/bootstrap/scss/card";
+//@import "../node_modules/bootstrap/scss/accordion";
+//@import "../node_modules/bootstrap/scss/breadcrumb";
+@import "../node_modules/bootstrap/scss/pagination";
+//@import "../node_modules/bootstrap/scss/badge";
+//@import "../node_modules/bootstrap/scss/alert";
+//@import "../node_modules/bootstrap/scss/progress";
+//@import "../node_modules/bootstrap/scss/list-group";
+@import "../node_modules/bootstrap/scss/close";
+//@import "../node_modules/bootstrap/scss/toasts";
+@import "../node_modules/bootstrap/scss/modal";
+//@import "../node_modules/bootstrap/scss/tooltip";
+//@import "../node_modules/bootstrap/scss/popover";
+//@import "../node_modules/bootstrap/scss/carousel";
+//@import "../node_modules/bootstrap/scss/spinners";
+//@import "../node_modules/bootstrap/scss/offcanvas";
+//@import "../node_modules/bootstrap/scss/placeholders";
+
+// Helpers
+@import "../node_modules/bootstrap/scss/helpers";
+
+// Utilities
+@import "../node_modules/bootstrap/scss/utilities/api";
