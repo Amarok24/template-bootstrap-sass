@@ -4,7 +4,7 @@
   https://github.com/Amarok24
 */
 
-// EDIT THIS TO CHANGE THE VIDEO! Video will be loaded on demand (page performance).
+// Edit the YouTube video ID here! Video will be loaded on demand (page performance).
 const youtubeVideoId = 'LaKT3pli5EQ';
 // ID (#) of CSS where Youtube API should generate the iframe.
 const videoCssId = 'customVideo';
@@ -12,6 +12,7 @@ const videoCssId = 'customVideo';
 const navBarCustomCssClass = 'navbar-js';
 const pageNavWrapper = document.querySelector('#navbarControlled');
 const pageNavAnchors = document.querySelectorAll('#navbarControlled a');
+const arrowScrollToTop = document.querySelector('#arrowScrollToTop');
 const elemVideoModal = document.querySelector('#videoModal');
 const elemPlayButton = document.querySelector('.play-button');
 
@@ -72,8 +73,10 @@ function launchObserver() {
     if (pageNav) {
       if (entries[0].isIntersecting) {
         pageNav.classList.remove(customCssClass);
+        arrowScrollToTop?.classList.add('d-none');
       } else {
         pageNav.classList.add(customCssClass);
+        arrowScrollToTop?.classList.remove('d-none');
       }
     }
   }
