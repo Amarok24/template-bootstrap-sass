@@ -73,12 +73,14 @@ body {
 }
 
 .story-background {
-  background-image: url("../../assets/img/our_story.jpg");
+  background-image: url(media.$imgStoryDesktop);
   background-size: auto 100%;
   background-position: 0 0;
   background-repeat: no-repeat;
 
   @include media.max("md") {
+    // FIXME: use min, not max
+    background-image: url(media.$imgStoryMobile);
     background-size: 100% auto;
     padding-bottom: 50%;
   }
