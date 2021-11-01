@@ -18,7 +18,8 @@
 
   <link rel="stylesheet" href="assets/css/style.css" />
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" />
 
   <script src="assets/scripts/bootstrap.bundle.min.js" defer="defer"></script>
   <script src="assets/scripts/appendix.js" defer="defer"></script>
@@ -88,8 +89,14 @@
 
       <div class="row gx-md-6">
 
-        <div class="col-md-6 order-last order-md-first mt-5 mt-md-0 story-background">
-          &#160;
+        <div class="col-md-6 order-last order-md-first mt-5 mt-md-0">
+          <picture class="story-image">
+            <source srcset="assets/img/our_story_desktop.jpg"
+              media="(min-width: 768px)" />
+            <source srcset="assets/img/our_story_mobile.webp" />
+            <img src="assets/img/our_story_desktop.jpg" alt="" width="1280" height="816"
+              loading="lazy" />
+          </picture>
         </div>
 
         <div class="col-md-6 order-first order-md-last">
