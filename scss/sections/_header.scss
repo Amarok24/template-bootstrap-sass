@@ -2,17 +2,21 @@
 @use "../media";
 
 .header-image {
-  height: 400px;
+  height: 300px;
   background-image: url(media.$imgHeaderMobile);
   background-repeat: no-repeat;
-  background-position: 93% 0;
-  background-size: auto 103%;
+  background-position: right bottom;
+  background-size: auto 100%;
   display: flex;
   align-items: flex-end;
   text-align: left;
   justify-content: start;
   color: $cTextLight;
   border-bottom: 12px solid $cBrandPrimary;
+
+  @include media.min("sm") {
+    background-size: 100% auto;
+  }
 
   @include media.min("md") {
     height: 40.3vw;

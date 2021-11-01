@@ -1,5 +1,16 @@
 @use "../palette" as *;
 
+
+button[type='reset'] {
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+
+  &:hover {
+    outline: 1px solid $cBrandPrimary;
+  }
+}
+
 %btn-custom {
   font-size: inherit;
   text-align: center;
