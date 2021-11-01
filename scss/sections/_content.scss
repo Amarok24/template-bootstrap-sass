@@ -81,27 +81,11 @@ body {
     @include media.min("md") {
       object-position: left bottom;
     }
+
     @include media.min("lg") {
       object-position: right bottom;
     }
   }
-
-  /*   background-repeat: no-repeat;
-  background-position: 0 0;
-  background-image: url(media.$imgStoryMobile);
-  background-size: 100% auto;
-  padding-bottom: 50%;
-
-  @include media.min("md") {
-    background-position: center bottom;
-    background-image: url(media.$imgStoryDesktop);
-    background-size: auto 100%;
-    padding-bottom: unset;
-  }
-
-  @include media.min("lg") {
-    background-position: 0 0;
-  } */
 }
 
 .benefits-list {
