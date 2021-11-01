@@ -1,8 +1,8 @@
 {
   "name": "template-bootstrap-sass",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "A clean starter template for Bootstrap and Sass.",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "watch:sass": "sass --no-source-map --watch scss:assets/css",
     "compress:sass": "sass --style=compressed scss:assets/css",

@@ -8,7 +8,7 @@ html {
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
   text-size-adjust: none;
-  /* size adjustments OFF on small devices */
+  /* size adjustments OFF on small screen */
   margin: 0;
   padding: 0;
 }
@@ -33,12 +33,12 @@ body {
   height: 40px;
   cursor: pointer;
   color: white;
-  background-color: rgba($cBrandPrimary, .5);
+  background-color: rgba($cBrandPrimary, 0.5);
 
   @include media.min("md") {
     width: 50px;
     height: 50px;
-    background-color: rgba($cBrandPrimary, .9);
+    background-color: rgba($cBrandPrimary, 0.9);
   }
 
   svg {
@@ -73,16 +73,21 @@ body {
 }
 
 .story-background {
-  background-image: url(media.$imgStoryDesktop);
-  background-size: auto 100%;
-  background-position: 0 0;
   background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: url(media.$imgStoryMobile);
+  background-size: 100% auto;
+  padding-bottom: 50%;
 
-  @include media.max("md") {
-    // FIXME: use min, not max
-    background-image: url(media.$imgStoryMobile);
-    background-size: 100% auto;
-    padding-bottom: 50%;
+  @include media.min("md") {
+    background-position: center bottom;
+    background-image: url(media.$imgStoryDesktop);
+    background-size: auto 100%;
+    padding-bottom: unset;
+  }
+
+  @include media.min("lg") {
+    background-position: 0 0;
   }
 }
 
@@ -131,16 +136,15 @@ body {
 
   .play-button {
     position: absolute;
-    left: calc(50% - 87px);
-    top: calc(50% - 87px);
-    width: 174px;
+    width: 100px;
     height: auto;
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
 
-    @include media.max("lg") {
-      width: 100px;
-      height: auto;
-      left: calc(50% - 50px);
-      top: calc(50% - 50px);
+    @include media.min("lg") {
+      width: 174px;
+      left: calc(50% - 87px);
+      top: calc(50% - 87px);
     }
 
     &:hover {
@@ -179,10 +183,6 @@ body {
   header {
     margin: 0;
     padding: $tabledata-padding;
-
-    @include media.max("md") {
-      display: none;
-    }
   }
 
   dl {
