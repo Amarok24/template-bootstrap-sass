@@ -10,8 +10,8 @@ const youtubeVideoId = 'LaKT3pli5EQ';
 const videoCssId = 'customVideo';
 
 const navBarCustomCssClass = 'navbar-js';
-const pageNavWrapper = document.querySelector('#navbarControlled');
-const pageNavAnchors = document.querySelectorAll('#navbarControlled a');
+const pageNavWrapper = document.querySelector('#navbarMain');
+const pageNavAnchors = document.querySelectorAll('#navbarMain a');
 const arrowScrollToTop = document.querySelector('#arrowScrollToTop');
 const elemVideoModal = document.querySelector('#videoModal');
 const elemPlayButton = document.querySelector('.play-button');

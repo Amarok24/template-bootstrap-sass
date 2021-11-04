@@ -22,6 +22,8 @@
 
   <script src="assets/scripts/bootstrap.bundle.min.js" defer="defer"></script>
   <script src="assets/scripts/appendix.js" defer="defer"></script>
+  <script src="assets/scripts/smoothscroll-polyfill.min.js" defer="defer">
+  /* Polyfill for Safari browser */ </script>
 </head>
 
 <body id="home" data-bs-spy="scroll" data-bs-target="#pageNav" data-bs-offset="150"
@@ -36,12 +38,12 @@
       </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarControlled" aria-controls="navbarControlled"
+        data-bs-target="#navbarMain" aria-controls="navbarMain"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarControlled">
+      <div class="collapse navbar-collapse" id="navbarMain">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="#home">Home</a>
@@ -84,8 +86,8 @@
 
 
   <section id="our_story" class="bg-light">
-    <article class="container-md px-4 px-xl-0 pt-5 pt-md-6 pb-1 pb-md-6">
-
+    <article class="container-md overflow-hidden px-4 px-xl-0 pt-5 pt-md-6 pb-1 pb-md-6">
+      <!-- .overflow-hidden fixes occasional x-overflow (because gx > 5 used below) -->
       <div class="row gx-md-6">
 
         <div class="col-md-6 order-last order-md-first mt-5 mt-md-0">
@@ -537,7 +539,7 @@
 
 
   <div id="arrowScrollToTop" title="Scroll to top"
-    onclick="document.querySelector('body').scrollIntoView({block: 'start'});">
+    onclick="document.querySelector('body').scrollIntoView({block: 'start', behavior: 'smooth'});">
     <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 20 20"
       height="18px" viewBox="0 0 20 20" width="18px" fill="currentColor">
       <g>
