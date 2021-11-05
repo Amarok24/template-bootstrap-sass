@@ -15,6 +15,7 @@ const pageNavAnchors = document.querySelectorAll('#navbarMain a');
 const arrowScrollToTop = document.querySelector('#arrowScrollToTop');
 const elemVideoModal = document.querySelector('#videoModal');
 const elemPlayButton = document.querySelector('.play-button');
+const elemScrollToTop = document.querySelector('#arrowScrollToTop');
 
 const intersectApiSupported = (
   'IntersectionObserver' in window &&
@@ -31,6 +32,20 @@ if (elemVideoModal && elemPlayButton) {
   elemVideoModal.addEventListener('hidden.bs.modal', function (ev) {
     if (youtubePlayer) youtubePlayer.pauseVideo();
   });
+
+  function injectYoutubeApi() {
+    if (youtubeApiInjected) {
+      youtubePlayer.playVideo();
+      return;
+    }
+    const tagScript = document.createElement('script');
+    tagScript.src = 'https://www.youtube.com/iframe_api';
+    let firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tagScript, firstScriptTag);
+    console.log("YouTube API code injected");
+    youtubeApiInjected = true;
+  }
+
   elemPlayButton.addEventListener('click', injectYoutubeApi);
 }
 
@@ -50,6 +65,16 @@ if (pageNavWrapper && pageNavAnchors) {
   document.addEventListener('keydown', function (ev) {
     if (ev.key === 'Escape' || ev.key === 'Esc') closeHamburger();
   });
+}
+
+
+if (elemScrollToTop) {
+  function onScrollToTopClick(ev) {
+    ev.preventDefault();
+    document.querySelector('body').scrollIntoView({block: 'start', behavior: 'smooth'});
+  }
+
+  elemScrollToTop.addEventListener('click', onScrollToTopClick);
 }
 
 
@@ -80,20 +105,6 @@ function launchObserver() {
       }
     }
   }
-}
-
-
-function injectYoutubeApi() {
-  if (youtubeApiInjected) {
-    youtubePlayer.playVideo();
-    return;
-  }
-  const tagScript = document.createElement('script');
-  tagScript.src = 'https://www.youtube.com/iframe_api';
-  let firstScriptTag = document.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode.insertBefore(tagScript, firstScriptTag);
-  console.log("YouTube API code injected");
-  youtubeApiInjected = true;
 }
 
 
