@@ -12,7 +12,6 @@ const videoCssId = 'customVideo';
 const navBarCustomCssClass = 'navbar-js';
 const pageNavWrapper = document.querySelector('#navbarMain');
 const pageNavAnchors = document.querySelectorAll('#navbarMain a');
-const arrowScrollToTop = document.querySelector('#arrowScrollToTop');
 const elemVideoModal = document.querySelector('#videoModal');
 const elemPlayButton = document.querySelector('.play-button');
 const elemScrollToTop = document.querySelector('#arrowScrollToTop');
@@ -98,10 +97,10 @@ function launchObserver() {
     if (pageNav) {
       if (entries[0].isIntersecting) {
         pageNav.classList.remove(customCssClass);
-        arrowScrollToTop?.classList.add('d-none');
+        elemScrollToTop?.classList.add('d-none');
       } else {
         pageNav.classList.add(customCssClass);
-        arrowScrollToTop?.classList.remove('d-none');
+        elemScrollToTop?.classList.remove('d-none');
       }
     }
   }
