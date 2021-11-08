@@ -1,6 +1,5 @@
-@use "palette" as *;
-@use "media";
-
+@use 'palette' as *;
+@use 'media';
 
 // CUSTOM Bootstrap variables:
 
@@ -25,6 +24,9 @@ $spacers: (
 $primary: $cBrandPrimary;
 //$secondary: $cBrandSecondary;
 //$warning: #ff7b00;
+
+$link-color: $cBrandPrimary;
+$link-hover-color: invert($cBrandPrimary);
 
 $display-font-sizes: (
   // Controls the display-n classes
