@@ -1,7 +1,7 @@
 /*
   Appendix script for Bootstrap + Sass template.
   Author: Jan Prazak
-  https://github.com/Amarok24
+  https://github.com/Amarok24/template-bootstrap-sass
 */
 
 // Edit the YouTube video ID here! Video will be loaded on demand (page performance).
