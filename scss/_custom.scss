@@ -4,17 +4,8 @@
 
 // CUSTOM Bootstrap variables:
 
-$grid-breakpoints: media.$breakpoints;
-
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  //xl: 1140px,
-  //xxl: 1320px
-  xl: 1000px,
-  xxl: 1140px,
-);
+$grid-breakpoints: media.$grid-breakpoints;
+$container-max-widths: media.$container-max-widths;
 
 $spacer: 1rem;
 $spacers: (
@@ -28,12 +19,12 @@ $spacers: (
   6: $spacer * 5,
   7: $spacer * 7.5,
   8: $spacer * 10.5,
-  9: $spacer * 14,
+  9: $spacer * 14
 );
 
 $primary: $cBrandPrimary;
-$secondary: $cBrandSecondary;
-$warning: #ff7b00;
+//$secondary: $cBrandSecondary;
+//$warning: #ff7b00;
 
 $display-font-sizes: (
   // Controls the display-n classes
@@ -48,7 +39,6 @@ $display-font-sizes: (
 );
 $display-font-weight: 400;
 $display-line-height: 1;
-
 
 $navbar-light-color: $cBrandSecondary;
 $navbar-light-hover-color: $cBrandSecondary;
