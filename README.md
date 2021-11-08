@@ -1,5 +1,5 @@
 # template-bootstrap-sass
-A clean starter template for Bootstrap and Sass.
+A clean and optimised starter template for Bootstrap 5 and Sass (SCSS).
 
 Demo: https://amarok24.github.io/template-bootstrap-sass/
 
