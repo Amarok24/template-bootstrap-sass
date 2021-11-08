@@ -69,6 +69,7 @@ if (pageNavWrapper && pageNavAnchors) {
 
 if (elemScrollToTop) {
   function onScrollToTopClick(ev) {
+    ev.stopPropagation();
     ev.preventDefault();
     document.querySelector('body').scrollIntoView({block: 'start', behavior: 'smooth'});
   }
