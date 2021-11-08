@@ -8,10 +8,9 @@ $imgHeaderDesktop: '../../assets/img/header_1920x800.jpg';
 $iconHamburger: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(90, 90, 90)" viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg>';
 $iconHamburgerCollapsed: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path stroke="rgb(90, 90, 90)" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/></svg>';
 
-
-// Use default breakpoints or adapt to your own needs here.
+// Use default breakpoints or adapt to your own needs.
 // See also https://getbootstrap.com/docs/5.0/layout/breakpoints/
-$breakpoints: (
+$grid-breakpoints: (
   xs: 0,
   sm: 576px,
   md: 768px,
@@ -20,10 +19,22 @@ $breakpoints: (
   xxl: 1400px
 );
 
+// Use default container max-widths or adapt to your own needs.
+// See https://getbootstrap.com/docs/5.0/layout/containers/#how-they-work
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  //xl: 1140px,
+  //xxl: 1320px
+  xl: 1000px,
+  xxl: 1140px
+);
+
 // Usage:
 // @include min("md") { ...CSS... }
 @mixin min($breakpointName) {
-  @media screen and (min-width: map.get($breakpoints, $breakpointName)) {
+  @media screen and (min-width: map.get($grid-breakpoints, $breakpointName)) {
     @content;
   }
 }
@@ -31,7 +42,7 @@ $breakpoints: (
 // Usage:
 // @include max("lg") { ...CSS... }
 @mixin max($breakpointName) {
-  @media screen and (max-width: map.get($breakpoints, $breakpointName) - 1px) {
+  @media screen and (max-width: (map.get($grid-breakpoints, $breakpointName) - 1px)) {
     @content;
   }
 }
@@ -39,7 +50,7 @@ $breakpoints: (
 // Usage:
 // @include between("sm", "lg") { ...CSS... }
 @mixin between($breakpointNameMin, $breakpointNameMax) {
-  @media screen and (min-width: map.get($breakpoints, $breakpointNameMin)) and (max-width: map.get($breakpoints, $breakpointNameMax) - 1px) {
+  @media screen and (min-width: map.get($grid-breakpoints, $breakpointNameMin)) and (max-width: (map.get($grid-breakpoints, $breakpointNameMax) - 1px)) {
     @content;
   }
 }
