@@ -21,19 +21,27 @@ const intersectApiSupported = (
   'IntersectionObserverEntry' in window);
 
 let bsPageNav = null;
-let bsModal = null;
+let bsVideoModal = null;
 let youtubePlayer = null;
 let youtubeApiInjected = false;
 
 
 if (elemVideoModal && elemPlayButton) {
-  bsModal = bootstrap.Modal.getOrCreateInstance(elemVideoModal);
+  //bsVideoModal = bootstrap.Modal.getOrCreateInstance(elemVideoModal);
+  bsVideoModal = new bootstrap.Modal(elemVideoModal);
+
   elemVideoModal.addEventListener('hidden.bs.modal', function (ev) {
+    console.log('bsVideoModal has been hidden');
     if (youtubePlayer) youtubePlayer.pauseVideo();
   });
 
-  function injectYoutubeApi() {
+  function injectYoutubeApi(ev) {
+    if (ev.type === 'keyup' && ev.key !== 'Enter') return;
+    console.log('showing bsVideoModal');
+    bsVideoModal.show();
+
     if (youtubeApiInjected) {
+      console.log('playing video...');
       youtubePlayer.playVideo();
       return;
     }
@@ -46,12 +54,19 @@ if (elemVideoModal && elemPlayButton) {
   }
 
   elemPlayButton.addEventListener('click', injectYoutubeApi);
+  elemPlayButton.addEventListener('keyup', injectYoutubeApi);
 }
 
 
 if (pageNavWrapper && pageNavAnchors) {
   //bsPageNav = new bootstrap.Collapse(pageNavWrapper, {toggle: false});
+  // 'toggle:false' means it should not be toggled (opened) upon creation.
   bsPageNav = bootstrap.Collapse.getOrCreateInstance(pageNavWrapper, { toggle: false });
+
+  function toggleHamburger() {
+    if (bsPageNav) bsPageNav.toggle();
+    pageNavAnchors[0].focus();
+  }
 
   function closeHamburger() {
     if (bsPageNav) bsPageNav.hide();
@@ -61,8 +76,8 @@ if (pageNavWrapper && pageNavAnchors) {
     pageNavAnchors[i].addEventListener('click', closeHamburger);
   }
 
-  document.addEventListener('keydown', function (ev) {
-    if (ev.key === 'Escape' || ev.key === 'Esc') closeHamburger();
+  document.addEventListener('keyup', function (ev) {
+    if (ev.key === 'Escape' || ev.key === 'Esc') toggleHamburger();
   });
 }
 
@@ -71,7 +86,7 @@ if (elemScrollToTop) {
   function onScrollToTopClick(ev) {
     ev.stopPropagation();
     ev.preventDefault();
-    document.querySelector('body').scrollIntoView({block: 'start', behavior: 'smooth'});
+    document.querySelector('body').scrollIntoView({ block: 'start', behavior: 'smooth' });
   }
 
   elemScrollToTop.addEventListener('click', onScrollToTopClick);
@@ -110,6 +125,7 @@ function launchObserver() {
 
 // Part of YT API. This event fires automatically once API is ready.
 function onYouTubeIframeAPIReady() {
+  console.log('onYouTubeIframeAPIReady launched');
   youtubePlayer = new YT.Player(videoCssId, {
     width: '560',
     height: '315',
@@ -131,6 +147,7 @@ function onYouTubeIframeAPIReady() {
 function onPlayerReady(ev) {
   //const embedCode = ev.target.getVideoEmbedCode();
   //ev.target.playVideo();
+  console.log('onPlayerReady launched');
   youtubePlayer.playVideo();
 }
 

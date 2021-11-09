@@ -1,0 +1,73 @@
+@use "../palette" as *;
+
+$spacer: 1rem;
+$tabledata-padding: $spacer * 1;
+
+.jobsearch-wrapper {
+  background-color: $cTextLight;
+  color: $cTextDark;
+  border-radius: 20px;
+
+  button[type="submit"] {
+    padding: 0.3em 1em;
+    line-height: normal;
+
+    &::before {
+      display: inline-block;
+      content: "";
+      width: 16px;
+      height: 16px;
+      vertical-align: baseline;
+      padding-right: 1.5em;
+      background-repeat: no-repeat;
+      background-size: fill;
+      background-image: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.7436 11.6314L11.375 9.26275C11.9263 8.344 12.25 7.27212 12.25 6.125C12.25 2.7475 9.50163 0 6.125 0C2.74837 0 0 2.7475 0 6.125C0 9.5025 2.74837 12.25 6.125 12.25C7.273 12.25 8.344 11.9271 9.26275 11.375L11.6314 13.7436C11.802 13.9142 12.026 14 12.25 14C12.474 14 12.698 13.9142 12.8686 13.7436L13.7436 12.8686C14.0857 12.5265 14.0857 11.9735 13.7436 11.6314ZM6.125 10.5C3.70913 10.5 1.75 8.54087 1.75 6.125C1.75 3.70913 3.70913 1.75 6.125 1.75C8.54087 1.75 10.5 3.70913 10.5 6.125C10.5 8.54087 8.54087 10.5 6.125 10.5Z" fill="black"/></svg>');
+    }
+  }
+}
+
+.jobsearch-data {
+  header {
+    margin: 0;
+    padding: $tabledata-padding;
+  }
+
+  dl {
+    margin: 0;
+    padding: $tabledata-padding;
+
+    &:nth-child(even) {
+      background-color: #f7f7f7;
+    }
+  }
+
+  dt, dd {
+    a {
+      font-weight: 400;
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    &:nth-child(3) {
+      &::before {
+        display: inline-block;
+        content: "";
+        vertical-align: sub;
+        padding-right: 24px;
+        width: 16px;
+        height: 20px;
+        background-repeat: no-repeat;
+        background-size: fill;
+        background-image: url('data:image/svg+xml,<svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.00128 0.000125112C6.97201 -0.0057117 5.9518 0.192733 4.99975 0.583967C4.0477 0.975201 3.18271 1.55145 2.45489 2.27934C1.72708 3.00723 1.15089 3.8723 0.75969 4.82445C0.368495 5.7766 0.17007 6.7969 0.175906 7.82628C0.175906 12.4354 7.13235 19.4785 7.39233 19.7395C7.47086 19.8218 7.56527 19.8874 7.66986 19.9321C7.77444 19.9769 7.88702 20 8.00078 20C8.11454 20 8.22713 19.9769 8.33171 19.9321C8.43629 19.8874 8.53071 19.8218 8.60923 19.7395C8.87021 19.4785 15.8257 12.4394 15.8257 7.82628C15.8315 6.79699 15.6331 5.77676 15.242 4.82468C14.8508 3.8726 14.2747 3.00758 13.547 2.2797C12.8193 1.55182 11.9544 0.975551 11.0025 0.584257C10.0506 0.192964 9.03047 -0.00557895 8.00128 0.000125112ZM8.00128 10.4353C7.65694 10.4417 7.31484 10.3786 6.99544 10.2497C6.67605 10.1209 6.38591 9.92892 6.14238 9.68536C5.89885 9.44181 5.70693 9.15164 5.57808 8.83222C5.44923 8.51279 5.38611 8.17066 5.39249 7.82628C5.40586 7.14329 5.68654 6.49279 6.17423 6.01451C6.66193 5.53622 7.31773 5.26831 8.00078 5.26831C8.68383 5.26831 9.33964 5.53622 9.82733 6.01451C10.315 6.49279 10.5957 7.14329 10.6091 7.82628C10.6154 8.17058 10.5524 8.51262 10.4236 8.83198C10.2948 9.15134 10.103 9.44146 9.85953 9.685C9.6161 9.92854 9.32609 10.1205 9.00681 10.2494C8.68753 10.3783 8.34554 10.4416 8.00128 10.4353Z" fill="%23febd10"/></svg>');
+      }
+    }
+  }
+}
+
+.jobsearch-data-pagination {
+  a {
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 1;
+  }
+}
