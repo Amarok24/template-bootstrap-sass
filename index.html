@@ -26,8 +26,7 @@
   /* Polyfill for Safari browser */ </script>
 </head>
 
-<body id="home" data-bs-spy="scroll" data-bs-target="#pageNav" data-bs-offset="150"
-  tabindex="0">
+<body id="home" data-bs-spy="scroll" data-bs-target="#pageNav" data-bs-offset="150">
 
 
   <nav id="pageNav" class="navbar navbar-expand-lg fixed-top navbar-light">
@@ -68,12 +67,11 @@
 
 
   <header class="header-image">
-    <div class="header-text px-3 py-4">
+    <div class="header-text px-4 py-3 p-md-5">
       <h1>
-        <span class="display-1">
+        <span class="d-block mb-2 display-1">
           Lorem ipsum
         </span>
-        <br />
         <span class="display-5 mt-0">
           dolor sit amet consectetur
         </span>
@@ -196,7 +194,7 @@
           height="1080" class="img-fluid" />
 
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 173 173" class="play-button"
-          alt="PLAY VIDEO" data-bs-toggle="modal" data-bs-target="#videoModal">
+          alt="PLAY VIDEO" tabindex="0">
           <g transform="translate(-60.7 -29.3)">
             <circle r="86.5" cy="115.8" cx="147.2" class="play-btn-background"
               opacity=".5" />
@@ -333,31 +331,31 @@
           </header>
 
           <dl class="row">
-            <dd class="col-md-5"><a href="#">Senior Java Developer</a></dd>
+            <dt class="col-md-5"><a href="#">Senior Java Developer</a></dt>
             <dd class="col-md-4">Information Technology</dd>
             <dd class="col-md-3">Norfolk</dd>
           </dl>
 
           <dl class="row">
-            <dd class="col-md-5"><a href="#">Mechanical Engineer</a></dd>
+            <dt class="col-md-5"><a href="#">Mechanical Engineer</a></dt>
             <dd class="col-md-4">Engineering</dd>
             <dd class="col-md-3">London</dd>
           </dl>
 
           <dl class="row">
-            <dd class="col-md-5"><a href="#">Computer Engineer</a></dd>
+            <dt class="col-md-5"><a href="#">Computer Engineer</a></dt>
             <dd class="col-md-4">Information Technology</dd>
             <dd class="col-md-3">Cornwall</dd>
           </dl>
 
           <dl class="row">
-            <dd class="col-md-5"><a href="#">Cloud Engineer</a></dd>
+            <dt class="col-md-5"><a href="#">Cloud Engineer</a></dt>
             <dd class="col-md-4">Engineering</dd>
             <dd class="col-md-3">Cornwall</dd>
           </dl>
 
           <dl class="row">
-            <dd class="col-md-5"><a href="#">Desk Officer</a></dd>
+            <dt class="col-md-5"><a href="#">Desk Officer</a></dt>
             <dd class="col-md-4">Finance</dd>
             <dd class="col-md-3">Norfolk</dd>
           </dl>
@@ -369,9 +367,9 @@
           class="jobsearch-data-pagination mt-5">
           <ul class="pagination justify-content-center">
             <li class="page-item disabled">
-              <a class="page-link pageSkip" href="#" tabindex="-1" aria-disabled="true"
-                aria-label="Previous page" title="Previous page"><span
-                  aria-hidden="true">&laquo;</span></a>
+              <a class="page-link pageSkip" href="#" aria-label="Previous page" title="Previous page">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
             </li>
             <li class="page-item active"><a class="page-link" href="#">1</a></li>
             <li class="page-item"><a class="page-link" href="#">2</a></li>
@@ -511,7 +509,7 @@
   </footer>
 
 
-  <div id="arrowScrollToTop" title="Scroll to top">
+  <div id="arrowScrollToTop" title="Scroll to top" tabindex="-1">
     <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 20 20"
       height="18px" viewBox="0 0 20 20" width="18px" fill="currentColor">
       <g>
