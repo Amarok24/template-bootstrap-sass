@@ -8,13 +8,20 @@
     "compress:sass": "sass --style=compressed scss:assets/css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "Jan Prazak",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amarok24/template-bootstrap-sass.git"
+  },
+  "license": "The Unlicense",
   "keywords": [
     "bootstrap5",
     "sass",
     "scss"
   ],
-  "author": "Jan Prazak",
-  "license": "The Unlicense",
+  "bugs": {
+    "url": "https://github.com/Amarok24/template-bootstrap-sass/issues"
+  },
   "devDependencies": {
     "sass": ">=1.42.1"
   },
