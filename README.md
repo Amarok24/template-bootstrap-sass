@@ -3,6 +3,8 @@ An optimised starter template for Bootstrap 5 and Sass (SCSS).
 
 Demo: https://amarok24.github.io/template-bootstrap-sass/
 
+The HTML page is fully accessible via keyboard. Use "ESC" for opening the navigation, "TAB" for switching between sections, "ENTER" for action.
+
 ## How to set up locally
 Click the "Use this template" button on the GitHub page to create your own copy directly in GitHub.
 
