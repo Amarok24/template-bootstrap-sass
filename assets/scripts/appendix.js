@@ -152,4 +152,13 @@ function onPlayerReady(ev) {
 }
 
 
+function handleVisibilityChange() {
+  if (youtubePlayer && document.visibilityState === "hidden") {
+    youtubePlayer.pauseVideo();
+  }
+}
+
+
 if (intersectApiSupported) launchObserver();
+
+document.addEventListener("visibilitychange", handleVisibilityChange, false);

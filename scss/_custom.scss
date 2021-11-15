@@ -22,11 +22,11 @@ $spacers: (
 );
 
 $primary: $cBrandPrimary;
-//$secondary: $cBrandSecondary;
+$secondary: $cBrandSecondary;
 //$warning: #ff7b00;
 
 $link-color: $cBrandPrimary;
-$link-hover-color: invert($cBrandPrimary);
+$link-hover-color: lighten($cBrandPrimary, 50%);
 
 $display-font-sizes: (
   // Controls the display-n classes
