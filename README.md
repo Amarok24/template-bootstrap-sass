@@ -7,7 +7,7 @@ Demo: https://amarok24.github.io/template-bootstrap-sass/
 - Optimised for accesibility (page readers)
 - Accessible via keyboard: use "ESC" to open the navigation, "TAB" to switch between sections, "ENTER" for action
 - Optimised for fast loading
-- Results of PageSpeed Insights: mobile 94%, desktop 99%
+- [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) results: mobile 94%, desktop 99%
 
 ## Project use
 Click the "Use this template" button on the GitHub page to create your own copy directly in GitHub.
