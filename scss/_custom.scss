@@ -1,5 +1,5 @@
-@use 'palette' as *;
-@use 'media';
+@use "palette" as *;
+@use "media";
 
 // CUSTOM Bootstrap variables:
 
@@ -14,11 +14,12 @@ $spacers: (
   3: $spacer,
   4: $spacer * 1.5,
   //5: $spacer * 3,
-  5: $spacer * 3.75, // 3.75 because of anchor scroll on mobile
+  5: $spacer * 3.75,
+  // 3.75 because of anchor scroll on mobile
   6: $spacer * 5,
   7: $spacer * 7.5,
   8: $spacer * 10.5,
-  9: $spacer * 14
+  9: $spacer * 14,
 );
 
 $primary: $cBrandPrimary;
@@ -41,17 +42,28 @@ $display-font-sizes: (
 $display-font-weight: 400;
 $display-line-height: 1;
 
+
 $navbar-light-color: $cBrandSecondary;
 $navbar-light-hover-color: $cBrandSecondary;
 $navbar-light-active-color: $cBrandSecondary;
 $navbar-light-disabled-color: silver;
-$navbar-light-brand-color: $cBrandSecondary;
-$navbar-light-brand-hover-color: inherit;
+$navbar-light-toggler-icon-bg: none;
+$navbar-light-toggler-border-color: rgba($cBrandSecondary, 0.2);
+
+$navbar-dark-color: silver;
+$navbar-dark-hover-color: silver;
+$navbar-dark-active-color: silver;
+$navbar-dark-disabled-color: rgba(rgb(124, 88, 88), 0.25);
+$navbar-dark-toggler-icon-bg: none;
+$navbar-dark-toggler-border-color: rgba(white, 0.3);
+
+$navbar-nav-link-padding-x: 1rem;
+
 $btn-border-radius: 0;
 $btn-padding-x: 1.6em;
 $btn-padding-y: 0.8em;
 //$btn-hover-bg-shade-amount: 15%,
-$btn-hover-bg-tint-amount:  30%;
+$btn-hover-bg-tint-amount: 30%;
 $form-label-color: $cTextDark;
 $form-select-border-color: $cButton2;
 $input-border-color: $cButton2;

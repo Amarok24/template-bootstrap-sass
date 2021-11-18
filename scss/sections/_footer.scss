@@ -2,8 +2,6 @@
 @use "../media";
 
 footer {
-  //border-top: 12px solid $cBrandSecondary;
-
   .social-icons {
     a {
       text-decoration: none;
@@ -33,4 +31,8 @@ footer {
       height: auto;
     }
   }
+}
+
+body[data-darkmode="1"] footer {
+  background-color: $cBackgroundDark !important;
 }
