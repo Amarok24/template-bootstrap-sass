@@ -8,6 +8,7 @@ Demo: https://amarok24.github.io/template-bootstrap-sass/
 - Accessible via keyboard: use "ESC" to open the navigation, "TAB" to switch between sections, "ENTER" for action
 - Optimised for fast loading
 - [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) results: mobile 94%, desktop 99%
+- Basic setup for switching between light/dark mode implemented
 
 ## Project use
 Click the "Use this template" button on the GitHub page to create your own copy directly in GitHub.

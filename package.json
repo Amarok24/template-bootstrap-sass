@@ -1,6 +1,6 @@
 {
   "name": "template-bootstrap-sass",
-  "version": "1.2.13",
+  "version": "1.2.15",
   "description": "An optimised starter template for Bootstrap and Sass.",
   "license": "The Unlicense",
   "browser": true,

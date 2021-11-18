@@ -10,11 +10,13 @@ const youtubeVideoId = 'LaKT3pli5EQ';
 const videoCssId = 'customVideo';
 
 const navBarCustomCssClass = 'navbar-js';
-const pageNavWrapper = document.querySelector('#navbarMain');
-const pageNavAnchors = document.querySelectorAll('#navbarMain a');
+const elemPageNav = document.querySelector('#pageNav');
+const elemNavbarCollapsible = document.querySelector('#navbarCollapsible');
+const elemNavAnchors = document.querySelectorAll('#navbarCollapsible a');
 const elemVideoModal = document.querySelector('#videoModal');
 const elemPlayButton = document.querySelector('.play-button');
 const elemScrollToTop = document.querySelector('#arrowScrollToTop');
+const elemToggleLightDarkMode = document.querySelector('#toggleLightDarkMode');
 
 const intersectApiSupported = (
   'IntersectionObserver' in window &&
@@ -58,22 +60,22 @@ if (elemVideoModal && elemPlayButton) {
 }
 
 
-if (pageNavWrapper && pageNavAnchors) {
-  //bsPageNav = new bootstrap.Collapse(pageNavWrapper, {toggle: false});
+if (elemNavbarCollapsible && elemNavAnchors) {
+  //bsPageNav = new bootstrap.Collapse(elemNavbarCollapsible, {toggle: false});
   // 'toggle:false' means it should not be toggled (opened) upon creation.
-  bsPageNav = bootstrap.Collapse.getOrCreateInstance(pageNavWrapper, { toggle: false });
+  bsPageNav = bootstrap.Collapse.getOrCreateInstance(elemNavbarCollapsible, { toggle: false });
 
   function toggleHamburger() {
     if (bsPageNav) bsPageNav.toggle();
-    pageNavAnchors[0].focus();
+    elemNavAnchors[0].focus();
   }
 
   function closeHamburger() {
     if (bsPageNav) bsPageNav.hide();
   }
 
-  for (let i = 0; i < pageNavAnchors.length; i++) {
-    pageNavAnchors[i].addEventListener('click', closeHamburger);
+  for (let i = 0; i < elemNavAnchors.length; i++) {
+    elemNavAnchors[i].addEventListener('click', closeHamburger);
   }
 
   document.addEventListener('keyup', function (ev) {
@@ -153,12 +155,40 @@ function onPlayerReady(ev) {
 
 
 function handleVisibilityChange() {
-  if (youtubePlayer && document.visibilityState === "hidden") {
+  if (youtubePlayer && document.visibilityState === 'hidden') {
     youtubePlayer.pauseVideo();
+  }
+}
+
+
+function toggleLightDarkMode(ev) {
+  ev.preventDefault();
+  ev.stopPropagation();
+
+  let isDarkMode = false;
+  const modeDataNow = document.body.dataset.darkmode;
+  if (!modeDataNow) return;
+
+  isDarkMode = modeDataNow === "0" ? false : true;
+
+  if (isDarkMode) {
+    console.log('Switching to light mode');
+    document.body.dataset.darkmode = '0';
+    elemPageNav.classList.remove('navbar-dark');
+    elemPageNav.classList.add('navbar-light');
+  } else {
+    console.log('Switching to dark mode');
+    document.body.dataset.darkmode = '1';
+    elemPageNav.classList.remove('navbar-light');
+    elemPageNav.classList.add('navbar-dark');
   }
 }
 
 
 if (intersectApiSupported) launchObserver();
 
-document.addEventListener("visibilitychange", handleVisibilityChange, false);
+if (elemToggleLightDarkMode && elemPageNav) {
+  elemToggleLightDarkMode.addEventListener('click', toggleLightDarkMode);
+}
+
+document.addEventListener('visibilitychange', handleVisibilityChange, false);
